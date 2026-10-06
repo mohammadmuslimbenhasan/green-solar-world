@@ -1,0 +1,282 @@
+{
+  "products": {
+    "shahab": {
+      "image": "products/shahab.jpg",
+      "title": "Shahab"
+    },
+    "test": {
+      "image": "products/test.jpg",
+      "title": "Test Product"
+    },
+    "100w-120w-traditional-led-wallpack": {
+      "image": "products/100w-120w-traditional-led-wallpack.jpg",
+      "title": "100w/120w Traditional LED Wallpack"
+    },
+    "led-flood-parking-lot-street-light": {
+      "image": "products/led-flood-parking-lot-street-light.jpg",
+      "title": "LED Flood/ Parking Lot/ Street Light"
+    },
+    "asymmetric-flood-lights": {
+      "image": "products/asymmetric-flood-lights.jpg",
+      "title": "Asymmetric Flood Lights"
+    },
+    "jc-10w-a": {
+      "image": "products/jc-10w-a.png",
+      "title": "JC-10W-A"
+    }
+  },
+  "extras": [
+    {
+      "slug": "2-1",
+      "file": "extras/2-1.jpg"
+    },
+    {
+      "slug": "3-3",
+      "file": "extras/3-3.jpg"
+    },
+    {
+      "slug": "photo-1497366754035-f200968a6e72",
+      "file": "extras/photo-1497366754035-f200968a6e72.jpeg"
+    },
+    {
+      "slug": "photo-1530545233050-3f0a5d0dd1ac",
+      "file": "extras/photo-1530545233050-3f0a5d0dd1ac.jpeg"
+    },
+    {
+      "slug": "screenshot-2019-07-19-at-2-08-01-pm",
+      "file": "extras/screenshot-2019-07-19-at-2-08-01-pm.png"
+    },
+    {
+      "slug": "logo-fnl",
+      "file": "extras/logo-fnl.png"
+    },
+    {
+      "slug": "texcan_logo",
+      "file": "extras/texcan_logo.png"
+    },
+    {
+      "slug": "vista_logo_2151",
+      "file": "extras/vista_logo_2151.png"
+    },
+    {
+      "slug": "logo-2",
+      "file": "extras/logo-2.png"
+    },
+    {
+      "slug": "liteline_logo_horizontal",
+      "file": "extras/liteline_logo_horizontal.gif"
+    },
+    {
+      "slug": "logo-1",
+      "file": "extras/logo-1.png"
+    },
+    {
+      "slug": "banvil",
+      "file": "extras/banvil.png"
+    },
+    {
+      "slug": "nsi-blackred-logo",
+      "file": "extras/nsi-blackred-logo.png"
+    },
+    {
+      "slug": "logo-temp",
+      "file": "extras/logo-temp.png"
+    },
+    {
+      "slug": "nesco_official_logo",
+      "file": "extras/nesco_official_logo.png"
+    },
+    {
+      "slug": "logo_en",
+      "file": "extras/logo_en.png"
+    },
+    {
+      "slug": "etlin-logo",
+      "file": "extras/etlin-logo.png"
+    },
+    {
+      "slug": "resturant",
+      "file": "extras/resturant.png"
+    },
+    {
+      "slug": "electri",
+      "file": "extras/electri.jpg"
+    },
+    {
+      "slug": "acrylic-white-lens-step-light-photocell-mini",
+      "file": "extras/acrylic-white-lens-step-light-photocell-mini.png"
+    },
+    {
+      "slug": "led-step-light-1",
+      "file": "extras/led-step-light-1.jpg"
+    },
+    {
+      "slug": "h5",
+      "file": "extras/h5.jpg"
+    },
+    {
+      "slug": "4-inch-mounting-plate",
+      "file": "extras/4-inch-mounting-plate.jpg"
+    },
+    {
+      "slug": "4-inch-par-20-line-voltage-ic",
+      "file": "extras/4-inch-par-20-line-voltage-ic.png"
+    },
+    {
+      "slug": "h2",
+      "file": "extras/h2.jpg"
+    },
+    {
+      "slug": "8-inch-slim",
+      "file": "extras/8-inch-slim.jpg"
+    },
+    {
+      "slug": "5pro-2",
+      "file": "extras/5pro-2.png"
+    },
+    {
+      "slug": "flush-mount-ceiling-light-brochure-101612181423-inch",
+      "file": "extras/flush-mount-ceiling-light-brochure-101612181423-inch.png"
+    },
+    {
+      "slug": "flush-mount",
+      "file": "extras/flush-mount.png"
+    },
+    {
+      "slug": "3pro-2",
+      "file": "extras/3pro-2.png"
+    },
+    {
+      "slug": "4pro",
+      "file": "extras/4pro.png"
+    },
+    {
+      "slug": "3pro",
+      "file": "extras/3pro.png"
+    },
+    {
+      "slug": "5pro",
+      "file": "extras/5pro.png"
+    },
+    {
+      "slug": "strip-1",
+      "file": "extras/strip-1.png"
+    },
+    {
+      "slug": "wkiaivjuzsv4blkpaaivgogo4o4784",
+      "file": "extras/wkiaivjuzsv4blkpaaivgogo4o4784.jpg"
+    },
+    {
+      "slug": "wkiaivjjixpkthfwaabrpywb_je576",
+      "file": "extras/wkiaivjjixpkthfwaabrpywb_je576.png"
+    },
+    {
+      "slug": "wkiaivjqowbbwj1vaaogkclnjng531",
+      "file": "extras/wkiaivjqowbbwj1vaaogkclnjng531.jpg"
+    },
+    {
+      "slug": "wkiaivjqmycfsa2taaemtkibiwe630",
+      "file": "extras/wkiaivjqmycfsa2taaemtkibiwe630.jpg"
+    },
+    {
+      "slug": "puck-lights",
+      "file": "extras/puck-lights.jpg"
+    },
+    {
+      "slug": "screenshot_4",
+      "file": "extras/screenshot_4.png"
+    },
+    {
+      "slug": "bulb7",
+      "file": "extras/bulb7.jpg"
+    },
+    {
+      "slug": "wall-pack",
+      "file": "extras/wall-pack.jpg"
+    },
+    {
+      "slug": "led-parking-lot-lights-led-shoe-box-lamp-2",
+      "file": "extras/led-parking-lot-lights-led-shoe-box-lamp-2.jpg"
+    },
+    {
+      "slug": "led-parking-lot-lights-led-shoe-box-lamp",
+      "file": "extras/led-parking-lot-lights-led-shoe-box-lamp.jpg"
+    },
+    {
+      "slug": "wkiaivju86vw_gahaalbzp_8yck611",
+      "file": "extras/wkiaivju86vw_gahaalbzp_8yck611.jpg"
+    },
+    {
+      "slug": "wkiaivjrisamsnl_aan0m82brpw778",
+      "file": "extras/wkiaivjrisamsnl_aan0m82brpw778.jpg"
+    },
+    {
+      "slug": "wkiaivjrinasj-ppaapefrwc_n4406",
+      "file": "extras/wkiaivjrinasj-ppaapefrwc_n4406.jpg"
+    },
+    {
+      "slug": "wkiaivjril6szn7paaynspzi7ig444",
+      "file": "extras/wkiaivjril6szn7paaynspzi7ig444.jpg"
+    },
+    {
+      "slug": "wkiaivjqw9atsnquaahw9r9fqti541",
+      "file": "extras/wkiaivjqw9atsnquaahw9r9fqti541.jpg"
+    },
+    {
+      "slug": "screenshot_2-1",
+      "file": "extras/screenshot_2-1.png"
+    },
+    {
+      "slug": "untitled-1",
+      "file": "extras/untitled-1.jpg"
+    },
+    {
+      "slug": "lsixth",
+      "file": "extras/lsixth.jpg"
+    },
+    {
+      "slug": "label",
+      "file": "extras/label.jpg"
+    },
+    {
+      "slug": "screenshot_3-1",
+      "file": "extras/screenshot_3-1.png"
+    },
+    {
+      "slug": "l2",
+      "file": "extras/l2.jpg"
+    },
+    {
+      "slug": "c2",
+      "file": "extras/c2.png"
+    },
+    {
+      "slug": "3-2",
+      "file": "extras/3-2.jpg"
+    },
+    {
+      "slug": "2-2",
+      "file": "extras/2-2.jpg"
+    },
+    {
+      "slug": "1-2",
+      "file": "extras/1-2.jpg"
+    },
+    {
+      "slug": "2",
+      "file": "extras/2.jpg"
+    },
+    {
+      "slug": "1",
+      "file": "extras/1.jpg"
+    },
+    {
+      "slug": "4",
+      "file": "extras/4.jpg"
+    },
+    {
+      "slug": "3",
+      "file": "extras/3.jpg"
+    }
+  ]
+}

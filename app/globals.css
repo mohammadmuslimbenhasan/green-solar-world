@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+@theme {
+  /* Phase 4 — bright editorial B2B palette */
+  --color-paper: #fafaf7;
+  --color-ink: #101828;
+  --color-ink-800: #1d2939;
+  --color-ink-700: #344054;
+  --color-ink-600: #475467;
+  --color-amber: #ffc400;
+  --color-amber-600: #edb100;
+  --color-amber-deep: #92610a; /* small text accents on white only */
+  --color-line: #e8e6e1;
+  --color-stock: #15803d;
+  --color-electric: #ffc400; /* legacy alias, now the light-theme amber */
+  --color-electric-600: #edb100;
+  --color-bone: #f6f4ee; /* retained for dark footer/admin surfaces */
+  --font-display: var(--font-space-grotesk), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-amber);
+  color: var(--color-ink);
+}
+
+/* ── Scroll reveal ─────────────────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ── Subtle dot pattern for light hero bands ───────────────────────────── */
+.pattern-light {
+  background-image: radial-gradient(circle at 1px 1px, rgba(16, 24, 40, 0.06) 1px, transparent 0);
+  background-size: 26px 26px;
+}
+
+/* ── Buttons ───────────────────────────────────────────────────────────── */
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+}
+.btn-shine::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.5) 50%,
+    transparent 60%
+  );
+  transform: translateX(-120%);
+  transition: transform 0.6s ease;
+  pointer-events: none;
+}
+.btn-shine:hover::after {
+  transform: translateX(120%);
+}
+
+/* ── Header cart badge bump ────────────────────────────────────────────── */
+@keyframes badge-pop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.35); }
+  100% { transform: scale(1); }
+}
+.badge-pop {
+  animation: badge-pop 0.35s ease;
+}
+
+/* ── Ambient pulse dot ─────────────────────────────────────────────────── */
+@keyframes pulse-dot {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 196, 0, 0.5); }
+  70% { box-shadow: 0 0 0 12px rgba(255, 196, 0, 0); }
+}
+.pulse-dot {
+  animation: pulse-dot 2.2s infinite;
+}
+
+/* ── Brand marquee (pause on hover) ────────────────────────────────────── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee 32s linear infinite;
+}
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* ── Featured carousel: hide scrollbar, keep snap ──────────────────────── */
+.snap-row {
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.snap-row::-webkit-scrollbar {
+  display: none;
+}
+.snap-row > * {
+  scroll-snap-align: start;
+}
+
+/* ── Thin scrollbar for chip rows ──────────────────────────────────────── */
+.nice-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+.nice-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-line);
+  border-radius: 999px;
+}
+
+/* ── Focus visibility ──────────────────────────────────────────────────── */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-amber-600);
+  outline-offset: 2px;
+}
