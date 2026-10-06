@@ -76,7 +76,7 @@ function LoginInner() {
       <div className="pattern-light hidden flex-col justify-between bg-white p-12 lg:flex">
         <Link href="/" className="flex items-center">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/logo.jpg" alt="Green Solar World Inc." width={170} height={95} className="h-12 w-auto rounded-xl bg-white p-1 ring-1 ring-line" />
+          <img src="/images/logo-full.png" alt="Green Solar World Inc." width={105} height={84} className="h-14 w-auto" />
         </Link>
         <div>
           <h2 className="font-display text-3xl font-bold leading-tight text-ink">

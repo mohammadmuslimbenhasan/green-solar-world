@@ -35,10 +35,8 @@ export default async function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-3">
-            <span className="overflow-hidden rounded-lg bg-white">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/logo.jpg" alt="Green Solar World Inc." width={170} height={95} className="h-9 w-auto" />
-            </span>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/logo-mark.png" alt="Green Solar World Inc." width={61} height={52} className="h-9 w-auto" />
             <span className="font-display text-lg font-bold">Green Solar World</span>
           </div>
           <p className="mt-4 text-sm leading-relaxed text-bone/60">

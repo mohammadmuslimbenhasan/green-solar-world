@@ -70,16 +70,22 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3.5 sm:px-6">
-        <Link href="/" className="group flex items-center" aria-label="Green Solar World — home">
-          <span className="overflow-hidden rounded-xl bg-white shadow-[0_2px_10px_rgba(16,24,40,0.08)] ring-1 ring-line transition-transform group-hover:scale-105">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/logo.jpg"
-              alt="Green Solar World Inc."
-              width={170}
-              height={95}
-              className="h-10 w-auto"
-            />
+        <Link href="/" className="group flex items-center gap-3" aria-label="Green Solar World — home">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/logo-mark.png"
+            alt="Green Solar World Inc."
+            width={61}
+            height={52}
+            className="h-10 w-auto transition-transform group-hover:scale-105"
+          />
+          <span className="leading-tight">
+            <span className="block font-display text-lg font-bold tracking-tight text-ink">
+              Green Solar World
+            </span>
+            <span className="block text-[11px] font-semibold uppercase tracking-[0.22em] text-amber-deep">
+              Wholesale Electrical &amp; Lighting
+            </span>
           </span>
         </Link>
 
