@@ -35,10 +35,9 @@ export default async function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-3">
-            <span className="grid h-9 w-9 place-items-center rounded-lg bg-amber text-ink">
-              <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor" aria-hidden="true">
-                <path d="M13 2 4.5 13.5H11L9.5 22 19 10h-6.5L13 2z" />
-              </svg>
+            <span className="overflow-hidden rounded-lg bg-white">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/logo.jpg" alt="Green Solar World Inc." width={170} height={95} className="h-9 w-auto" />
             </span>
             <span className="font-display text-lg font-bold">Green Solar World</span>
           </div>

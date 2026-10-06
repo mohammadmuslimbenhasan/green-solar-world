@@ -14,7 +14,25 @@ export async function GET(request: Request) {
     const supabase = await createSupabaseServer();
     if (supabase) {
       const { error } = await supabase.auth.exchangeCodeForSession(code);
-      if (!error) return NextResponse.redirect(`${origin}${next}`);
+      if (!error) {
+        // Route by role: admins to the dashboard, customers to their portal,
+        // unless an explicit `next` destination was requested.
+        let target = next;
+        if (next === '/account' || next === '/account/') {
+          const {
+            data: { user },
+          } = await supabase.auth.getUser();
+          if (user) {
+            const { data: profile } = await supabase
+              .from('profiles')
+              .select('role')
+              .eq('id', user.id)
+              .single();
+            if (profile?.role === 'admin') target = '/admin';
+          }
+        }
+        return NextResponse.redirect(`${origin}${target}`);
+      }
     }
   }
 

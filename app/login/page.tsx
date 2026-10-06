@@ -28,13 +28,24 @@ function LoginInner() {
       return;
     }
     setBusy(true);
-    const { error } = await supabase.auth.signInWithPassword({ email, password });
+    const { data, error } = await supabase.auth.signInWithPassword({ email, password });
     setBusy(false);
     if (error) {
       setNotice({ kind: 'error', text: error.message });
       return;
     }
-    router.push(next);
+    // Admins land on the dashboard, customers on their portal — unless a
+    // specific `next` destination was requested (e.g. /admin?next=…).
+    let target = next;
+    if (data.user && next === '/account') {
+      const { data: profile } = await supabase
+        .from('profiles')
+        .select('role')
+        .eq('id', data.user.id)
+        .single();
+      if (profile?.role === 'admin') target = '/admin';
+    }
+    router.push(target);
     router.refresh();
   };
 
@@ -63,13 +74,9 @@ function LoginInner() {
     <div className="mx-auto grid min-h-[70vh] max-w-6xl overflow-hidden rounded-3xl border border-line lg:grid-cols-2">
       {/* Brand panel */}
       <div className="pattern-light hidden flex-col justify-between bg-white p-12 lg:flex">
-        <Link href="/" className="flex items-center gap-3">
-          <span className="grid h-10 w-10 place-items-center rounded-xl bg-electric text-ink">
-            <svg viewBox="0 0 24 24" className="h-6 w-6" fill="currentColor" aria-hidden="true">
-              <path d="M13 2 4.5 13.5H11L9.5 22 19 10h-6.5L13 2z" />
-            </svg>
-          </span>
-          <span className="font-display text-lg font-bold text-ink">Green Solar World</span>
+        <Link href="/" className="flex items-center">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/images/logo.jpg" alt="Green Solar World Inc." width={170} height={95} className="h-12 w-auto rounded-xl bg-white p-1 ring-1 ring-line" />
         </Link>
         <div>
           <h2 className="font-display text-3xl font-bold leading-tight text-ink">

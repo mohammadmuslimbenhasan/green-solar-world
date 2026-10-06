@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { useCart } from '@/components/cart/CartContext';
+import { getSupabaseBrowser } from '@/lib/supabase-browser';
 import { collections, SITE } from '@/data/catalog';
 
 const NAV = [
@@ -19,8 +20,31 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const [bump, setBump] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [accountHref, setAccountHref] = useState('/login');
 
   useEffect(() => setOpen(false), [pathname]);
+
+  // Route the account icon by role: admins land on the dashboard, customers on their portal.
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const supabase = getSupabaseBrowser();
+      if (!supabase) return;
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+      if (!user || cancelled) return;
+      const { data: profile } = await supabase
+        .from('profiles')
+        .select('role')
+        .eq('id', user.id)
+        .single();
+      if (!cancelled) setAccountHref(profile?.role === 'admin' ? '/admin' : '/account');
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [pathname]);
 
   useEffect(() => {
     if (lastAddedAt === 0) return;
@@ -46,19 +70,16 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3.5 sm:px-6">
-        <Link href="/" className="group flex items-center gap-3" aria-label="Green Solar World — home">
-          <span className="grid h-10 w-10 place-items-center rounded-xl bg-amber text-ink shadow-[0_2px_10px_rgba(255,196,0,0.45)] transition-transform group-hover:scale-105">
-            <svg viewBox="0 0 24 24" className="h-6 w-6" fill="currentColor" aria-hidden="true">
-              <path d="M13 2 4.5 13.5H11L9.5 22 19 10h-6.5L13 2z" />
-            </svg>
-          </span>
-          <span className="leading-tight">
-            <span className="block font-display text-lg font-bold tracking-tight text-ink">
-              Green Solar World
-            </span>
-            <span className="block text-[11px] font-semibold uppercase tracking-[0.22em] text-amber-deep">
-              Wholesale Electrical &amp; Lighting
-            </span>
+        <Link href="/" className="group flex items-center" aria-label="Green Solar World — home">
+          <span className="overflow-hidden rounded-xl bg-white shadow-[0_2px_10px_rgba(16,24,40,0.08)] ring-1 ring-line transition-transform group-hover:scale-105">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/logo.jpg"
+              alt="Green Solar World Inc."
+              width={170}
+              height={95}
+              className="h-10 w-auto"
+            />
           </span>
         </Link>
 
@@ -114,6 +135,17 @@ export default function Header() {
           </a>
 
           <Link
+            href={accountHref}
+            className="grid h-10 w-10 place-items-center rounded-xl border border-line bg-white text-ink transition-colors hover:border-amber hover:text-amber-deep"
+            aria-label={accountHref === '/login' ? 'Sign in' : 'My account'}
+          >
+            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+              <circle cx="12" cy="8" r="3.6" />
+              <path d="M4.5 20c1.4-3.2 4.2-5 7.5-5s6.1 1.8 7.5 5" strokeLinecap="round" />
+            </svg>
+          </Link>
+
+          <Link
             href="/cart/"
             className="relative grid h-10 w-10 place-items-center rounded-xl border border-line bg-white text-ink transition-colors hover:border-amber hover:text-amber-deep"
             aria-label={`Cart, ${count} items`}
@@ -167,6 +199,16 @@ export default function Header() {
           <p className="px-3 pt-3 text-[11px] font-bold uppercase tracking-[0.2em] text-ink/40">
             Collections
           </p>
+          <Link
+            href={accountHref}
+            className="mt-2 flex items-center gap-2 rounded-lg bg-paper px-3 py-2.5 text-sm font-semibold text-ink"
+          >
+            <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+              <circle cx="12" cy="8" r="3.6" />
+              <path d="M4.5 20c1.4-3.2 4.2-5 7.5-5s6.1 1.8 7.5 5" strokeLinecap="round" />
+            </svg>
+            {accountHref === '/login' ? 'Sign In / Register' : accountHref === '/admin' ? 'Admin Dashboard' : 'My Account'}
+          </Link>
           {collections.map((c) => (
             <Link
               key={c.slug}
