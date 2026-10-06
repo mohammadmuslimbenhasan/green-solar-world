@@ -248,8 +248,23 @@ const PRODUCT_IMAGES: Record<string, string> = {
 };
 
 
+const usedSkus = new Set<string>();
+
 function skuFor(slug: string): string {
-  return `GSW-${slug.replace(/-/g, '').slice(0, 10).toUpperCase()}`;
+  const dedashed = slug.replace(/-/g, '').toUpperCase();
+  // First 10 chars can collide for similar slugs (e.g. two sizes of the same
+  // product) — extend until the SKU is unique.
+  let base = dedashed.slice(0, 10);
+  let i = 12;
+  while (usedSkus.has(`GSW-${base}`) && i <= dedashed.length + 2) {
+    base = dedashed.slice(0, i);
+    i += 2;
+  }
+  let sku = `GSW-${base}`;
+  let n = 2;
+  while (usedSkus.has(sku)) sku = `GSW-${base}${n++}`;
+  usedSkus.add(sku);
+  return sku;
 }
 
 function p(
