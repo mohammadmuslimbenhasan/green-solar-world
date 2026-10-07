@@ -159,7 +159,7 @@ export default async function HomePage() {
                   ))}
                 </span>
                 <span className="font-semibold text-ink">{gbpAggregate.rating.toFixed(1)}</span>
-                <span className="text-ink/55">· Based on {gbpAggregate.reviewCount} Google reviews</span>
+                <span className="text-ink/65">· Based on {gbpAggregate.reviewCount} Google reviews</span>
               </a>
             </Reveal>
 
