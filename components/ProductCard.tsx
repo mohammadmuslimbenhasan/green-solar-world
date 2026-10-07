@@ -15,7 +15,6 @@ export default function ProductCard({ product, priority = false }: { product: Pr
       <Link
         href={`/products/${product.slug}/`}
         className="relative block overflow-hidden bg-white"
-        aria-label={product.name}
       >
         <ProductImage
           product={product}
@@ -43,7 +42,7 @@ export default function ProductCard({ product, priority = false }: { product: Pr
             {product.name}
           </Link>
         </h3>
-        <p className="line-clamp-2 text-[13px] leading-relaxed text-ink/55">{product.short}</p>
+        <p className="line-clamp-2 text-[13px] leading-relaxed text-ink/60">{product.short}</p>
 
         <div className="mt-auto flex items-end justify-between gap-3 pt-3">
           <div>

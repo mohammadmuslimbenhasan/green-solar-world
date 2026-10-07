@@ -99,10 +99,14 @@ export default function ReviewsCarousel({
               aria-selected={i === index}
               aria-label={`Review ${i + 1}`}
               onClick={() => setIndex(i)}
-              className={`h-2 rounded-full transition-all ${
-                i === index ? 'w-6 bg-amber' : 'w-2 bg-ink/15 hover:bg-ink/30'
-              }`}
-            />
+              className="grid h-7 w-7 place-items-center rounded-full"
+            >
+              <span
+                className={`block h-2 rounded-full transition-all ${
+                  i === index ? 'w-6 bg-amber' : 'w-2 bg-ink/15 hover:bg-ink/30'
+                }`}
+              />
+            </button>
           ))}
         </div>
         <button
