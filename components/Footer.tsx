@@ -32,9 +32,9 @@ export default async function Footer() {
 
   return (
     <footer className="bg-ink text-bone">
-      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 md:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 text-center md:grid-cols-2 md:text-left lg:grid-cols-4">
         <div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center justify-center gap-3 md:justify-start">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/images/logo-mark.png" alt="Green Solar World Inc." width={61} height={52} className="h-9 w-auto" />
             <span className="font-display text-lg font-bold">Green Solar World</span>
@@ -55,7 +55,7 @@ export default async function Footer() {
             {gbpAggregate.rating.toFixed(1)}★ · {gbpAggregate.reviewCount} Google reviews
           </a>
           {socials.length > 0 && (
-            <div className="mt-4 flex gap-3">
+            <div className="mt-4 flex justify-center gap-3 md:justify-start">
               {socials.map((s) => (
                 <a
                   key={s.key}

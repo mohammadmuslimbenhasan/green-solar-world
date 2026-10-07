@@ -99,7 +99,7 @@ export default async function HomePage() {
       {/* ── 3) HERO ──────────────────────────────────────────────────────── */}
       <section className="pattern-light border-b border-line">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 pb-20 pt-14 sm:pt-20 lg:grid-cols-[1.05fr_0.95fr]">
-          <div>
+          <div className="text-center lg:text-left">
             <Reveal>
               <p className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-amber-deep">
                 <span className="pulse-dot h-2 w-2 rounded-full bg-amber" />
@@ -117,14 +117,14 @@ export default async function HomePage() {
               </h1>
             </Reveal>
             <Reveal delay={180}>
-              <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink/65">
+              <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink/65 lg:mx-0 mx-auto">
                 {SITE.tagline}. From our Mississauga counter we supply contractors with
                 wholesale LED lighting across Canada and electrical materials across the GTA —
                 with dependable technical expertise and personalized service.
               </p>
             </Reveal>
             <Reveal delay={260}>
-              <div className="mt-9 flex flex-wrap items-center gap-4">
+              <div className="mt-9 flex flex-wrap items-center justify-center gap-4 lg:justify-start">
                 <Link
                   href="/collections/"
                   className="btn-shine inline-flex items-center gap-2 rounded-xl bg-amber px-7 py-3.5 font-display text-sm font-bold uppercase tracking-wide text-ink shadow-[0_4px_18px_rgba(255,196,0,0.45)] transition-transform hover:scale-[1.03]"
@@ -164,7 +164,7 @@ export default async function HomePage() {
 
             {/* Stats — figures are estimates for marketing purposes */}
             <Reveal delay={380}>
-              <dl className="mt-10 grid grid-cols-3 gap-6 border-t border-line pt-8">
+              <dl className="mt-10 grid grid-cols-3 gap-4 border-t border-line pt-8 sm:gap-6">
                 {[
                   { value: 10, suffix: '+', label: 'Years in Business' },
                   { value: 500, suffix: '+', label: 'Products in Catalog' },
@@ -183,9 +183,9 @@ export default async function HomePage() {
             </Reveal>
           </div>
 
-          {/* Photo collage */}
-          <Reveal delay={200} className="relative hidden lg:block">
-            <div className="relative">
+          {/* Photo collage — stacked and centered on mobile, side-by-side on desktop */}
+          <Reveal delay={200} className="relative mt-6 block lg:mt-0">
+            <div className="relative mx-auto max-w-md pb-8 pl-2 sm:pl-0 lg:max-w-none lg:pb-8">
               <img
                 src="/images/hero/office-1.jpg"
                 alt="Modern office interior lit by commercial LED fixtures"
@@ -194,9 +194,9 @@ export default async function HomePage() {
               <img
                 src="/images/extras/resturant.png"
                 alt="Restaurant dining room with pendant lighting"
-                className="absolute -bottom-8 right-0 aspect-square w-1/2 rounded-2xl border-4 border-amber object-cover shadow-[0_24px_60px_rgba(16,24,40,0.22)]"
+                className="absolute -bottom-2 right-0 aspect-square w-1/2 rounded-2xl border-4 border-amber object-cover shadow-[0_24px_60px_rgba(16,24,40,0.22)] sm:-bottom-8"
               />
-              <figure className="absolute -left-4 -top-6 w-64 rounded-2xl border border-line bg-white p-4 shadow-[0_20px_50px_rgba(16,24,40,0.14)]">
+              <figure className="absolute -left-1 -top-4 w-52 rounded-2xl border border-line bg-white p-4 shadow-[0_20px_50px_rgba(16,24,40,0.14)] sm:-left-4 sm:-top-6 sm:w-64">
                 <div className="flex text-amber-deep" aria-hidden="true">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <svg key={i} viewBox="0 0 20 20" className="h-3.5 w-3.5 fill-current"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.6l1-5.8L1.5 7.7l5.9-.9L10 1.5z" /></svg>
@@ -218,7 +218,7 @@ export default async function HomePage() {
           Brands we carry
         </p>
         <div className="marquee overflow-hidden">
-          <div className="marquee-track flex w-max items-center gap-14 px-7">
+          <div className="marquee-track flex w-max items-center gap-8 px-5 sm:gap-14 sm:px-7">
             {[...BRAND_LOGOS, ...BRAND_LOGOS].map((logo, i) => (
               <img
                 key={`${logo.name}-${i}`}
@@ -237,7 +237,7 @@ export default async function HomePage() {
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {TRUST.map((t, i) => (
             <Reveal key={t.title} delay={i * 80}>
-              <div className="flex h-full gap-4 rounded-2xl border border-line bg-white p-6 transition-all hover:-translate-y-0.5 hover:shadow-[0_16px_40px_rgba(16,24,40,0.08)]">
+              <div className="flex h-full flex-col items-center gap-4 rounded-2xl border border-line bg-white p-6 text-center transition-all hover:-translate-y-0.5 hover:shadow-[0_16px_40px_rgba(16,24,40,0.08)] sm:flex-row sm:items-start sm:text-left">
                 <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-amber/15 text-amber-deep">
                   <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     {t.icon}
@@ -256,7 +256,7 @@ export default async function HomePage() {
       {/* ── 6) FEATURED PRODUCTS ─────────────────────────────────────────── */}
       <section className="border-t border-line bg-white py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <Reveal className="flex flex-wrap items-end justify-between gap-4">
+          <Reveal className="flex flex-col items-center text-center sm:flex-row sm:items-end sm:justify-between sm:text-left">
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.22em] text-amber-deep">Contractor Favourites</p>
               <h2 className="mt-2 font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl">Featured Products</h2>
@@ -279,7 +279,7 @@ export default async function HomePage() {
 
       {/* ── 7) COLLECTIONS ───────────────────────────────────────────────── */}
       <section className="mx-auto max-w-7xl px-6 py-20">
-        <Reveal className="max-w-3xl">
+        <Reveal className="mx-auto max-w-3xl text-center sm:text-left">
           <p className="text-xs font-bold uppercase tracking-[0.22em] text-amber-deep">View Categories by Collections</p>
           <h2 className="mt-2 font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl">
             Wholesale LED Lighting &amp; Electrical Materials, Four Ways.
@@ -339,7 +339,7 @@ export default async function HomePage() {
       {/* ── 8) INDUSTRIES / APPLICATIONS ─────────────────────────────────── */}
       <section className="border-t border-line bg-white py-20">
         <div className="mx-auto max-w-7xl px-6">
-          <Reveal className="max-w-2xl">
+          <Reveal className="mx-auto max-w-2xl text-center sm:text-left">
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-amber-deep">Applications</p>
             <h2 className="mt-2 font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl">
               Spec&rsquo;d for Your Industry.
@@ -389,7 +389,7 @@ export default async function HomePage() {
       {/* ── 10) ABOUT TEASER + STATS ─────────────────────────────────────── */}
       <section className="border-t border-line bg-white py-20">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-2">
-          <Reveal>
+          <Reveal className="text-center lg:text-left">
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-amber-deep">About GSW</p>
             <h2 className="mt-2 font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl">
               Dependable expertise. Personalized service.

@@ -23,7 +23,7 @@ export default function Carousel({ children, label }: { children: ReactNode; lab
       >
         {children}
       </div>
-      <div className="mt-4 flex justify-end gap-2">
+      <div className="mt-4 flex justify-center gap-2 sm:justify-end">
         <button
           type="button"
           onClick={() => scroll(-1)}
