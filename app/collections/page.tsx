@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Reveal from '@/components/Reveal';
 import { getCatalog } from '@/lib/data';
 import { collectionsIndexMeta } from '@/data/collection-content';
+import { IMAGE_DIMS } from '@/lib/image-dims';
 
 export const revalidate = 300; // ISR: catalog pages stay static-fast, refresh every 5 minutes
 
@@ -47,6 +48,8 @@ export default async function CollectionsPage() {
                       <img
                         src={c.image}
                         alt={`${c.name} — application photo`}
+                        width={IMAGE_DIMS[c.image]?.[0]}
+                        height={IMAGE_DIMS[c.image]?.[1]}
                         loading="lazy"
                         className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
                       />

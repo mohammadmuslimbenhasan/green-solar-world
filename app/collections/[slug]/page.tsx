@@ -14,6 +14,7 @@ import {
 } from '@/lib/data';
 import { collectionContent } from '@/data/collection-content';
 import type { CollectionSlug } from '@/data/catalog';
+import { IMAGE_DIMS } from '@/lib/image-dims';
 
 export const revalidate = 300; // ISR: catalog pages stay static-fast, refresh every 5 minutes
 
@@ -70,6 +71,8 @@ export default async function CollectionPage({ params }: { params: Promise<{ slu
             <img
               src={collection.image}
               alt={`${collection.name} — application photo`}
+              width={IMAGE_DIMS[collection.image]?.[0]}
+              height={IMAGE_DIMS[collection.image]?.[1]}
               className="absolute inset-0 h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-ink/60" aria-hidden="true" />

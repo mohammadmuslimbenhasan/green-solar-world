@@ -5,7 +5,7 @@ import type { Review } from '@/data/reviews';
 
 export function Stars({ rating, className = 'h-4 w-4' }: { rating: number; className?: string }) {
   return (
-    <span className="inline-flex items-center gap-0.5 text-amber-deep" aria-label={`${rating} out of 5 stars`}>
+    <span role="img" aria-label={`${rating} out of 5 stars`} className="inline-flex items-center gap-0.5 text-amber-deep">
       {Array.from({ length: 5 }, (_, i) => (
         <svg
           key={i}
@@ -69,7 +69,7 @@ export default function ReviewsCarousel({
                 <p className="mt-4 text-lg leading-relaxed text-ink/80">&ldquo;{r.text}&rdquo;</p>
                 <figcaption className="mt-5 text-sm">
                   <span className="font-display font-bold text-ink">{r.authorName}</span>
-                  <span className="ml-2 text-ink/45">
+                  <span className="ml-2 text-ink/60">
                     via {r.source === 'google' ? 'Google' : r.source}
                   </span>
                 </figcaption>
@@ -117,7 +117,7 @@ export default function ReviewsCarousel({
         </button>
       </div>
 
-      <p className="mt-5 text-center text-xs text-ink/45">
+      <p className="mt-5 text-center text-xs text-ink/60">
         <a href={gbpUrl} target="_blank" rel="noreferrer" className="font-semibold text-amber-deep hover:underline">
           {aggregate.rating.toFixed(1)}-star rating · Based on {aggregate.reviewCount} Google reviews
         </a>

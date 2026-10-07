@@ -73,7 +73,7 @@ export default async function Footer() {
         </div>
 
         <nav aria-label="Collections">
-          <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-bone/40">Collections</h2>
+          <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-bone/60">Collections</h2>
           <ul className="mt-4 space-y-2.5 text-sm">
             {collections.map((c) => (
               <li key={c.slug}>
@@ -86,7 +86,7 @@ export default async function Footer() {
         </nav>
 
         <nav aria-label="Popular categories">
-          <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-bone/40">Popular Categories</h2>
+          <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-bone/60">Popular Categories</h2>
           <ul className="mt-4 space-y-2.5 text-sm">
             {['led-slim-panel', 'led-wall-pack', 'led-ufo-high-bay', 'wire', 'led-flat-panel', 'panel-board-breakers'].map((slug) => {
               const cat = categories.find((c) => c.slug === slug)!;
@@ -106,7 +106,7 @@ export default async function Footer() {
         </nav>
 
         <div>
-          <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-bone/40">Contact</h2>
+          <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-bone/60">Contact</h2>
           <address className="mt-4 space-y-3 text-sm not-italic text-bone/70">
             <p>{SITE.address}</p>
             <p>
@@ -137,7 +137,7 @@ export default async function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-5 text-xs text-bone/40 sm:flex-row">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-5 text-xs text-bone/60 sm:flex-row">
           <p>© {new Date().getFullYear()} {SITE.name} All rights reserved.</p>
           <p>Wholesale · Distribution · Technical Expertise — Mississauga, Ontario</p>
         </div>

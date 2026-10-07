@@ -1,5 +1,6 @@
 import type { Product } from '@/data/catalog';
 import { ProductArtForProduct } from '@/components/ProductArt';
+import { IMAGE_DIMS } from '@/lib/image-dims';
 
 /**
  * Renders a product's real photo when one is mapped, otherwise the generated
@@ -23,6 +24,8 @@ export default function ProductImage({
     <img
       src={product.image}
       alt={`${product.name} — wholesale product photo`}
+      width={IMAGE_DIMS[product.image]?.[0]}
+      height={IMAGE_DIMS[product.image]?.[1]}
       loading={priority ? 'eager' : 'lazy'}
       decoding="async"
       className={className}

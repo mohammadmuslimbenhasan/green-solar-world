@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { ProductArtForProduct } from '@/components/ProductArt';
 import type { Product } from '@/data/catalog';
+import { IMAGE_DIMS } from '@/lib/image-dims';
 
 /**
  * Product-page gallery: main view + thumbnail "views" from other verified
@@ -34,6 +35,8 @@ export default function ProductGallery({
         <img
           src={all[active]}
           alt={`${product.name} — photo ${active + 1}`}
+          width={IMAGE_DIMS[all[active]]?.[0]}
+          height={IMAGE_DIMS[all[active]]?.[1]}
           className="aspect-square w-full object-contain"
         />
       </div>
@@ -52,7 +55,7 @@ export default function ProductGallery({
               }`}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={src} alt="" className="h-14 w-14 object-contain" />
+              <img src={src} alt="" width={IMAGE_DIMS[src]?.[0]} height={IMAGE_DIMS[src]?.[1]} className="h-14 w-14 object-contain" />
             </button>
           ))}
         </div>

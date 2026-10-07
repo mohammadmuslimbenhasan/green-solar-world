@@ -11,6 +11,7 @@ import { featuredProducts, getReviews, getCatalog } from '@/lib/data';
 import { SITE, categories, products } from '@/data/catalog';
 import { gbpAggregate, GBP_URL } from '@/data/reviews';
 import { BRAND_LOGOS } from '@/data/image-notes';
+import { IMAGE_DIMS } from '@/lib/image-dims';
 
 export const revalidate = 300; // ISR: catalog pages stay static-fast, refresh every 5 minutes
 
@@ -71,17 +72,17 @@ const INDUSTRIES = [
   {
     title: 'Hospitality',
     text: 'Restaurants, hotels and venues — pendants, dimming and warm-white packages that set the room.',
-    image: '/images/extras/resturant.png',
+    image: '/images/extras/resturant.webp',
   },
   {
     title: 'Office & Commercial',
     text: 'Panels, downlights and controls for offices, retail and fit-outs across Toronto and the GTA.',
-    image: '/images/hero/office-1.jpg',
+    image: '/images/hero/office-1.webp',
   },
   {
     title: 'Industrial & Electrical',
     text: 'High bays, striplights and the full rough-in book — wire, devices, conduit and panels.',
-    image: '/images/extras/electri.jpg',
+    image: '/images/extras/electri.webp',
   },
 ];
 
@@ -174,7 +175,7 @@ export default async function HomePage() {
                     <dd className="font-display text-3xl font-bold text-ink sm:text-4xl">
                       <Counter to={s.value} suffix={s.suffix} />
                     </dd>
-                    <dt className="mt-1 block text-xs uppercase tracking-[0.14em] text-ink/45">
+                    <dt className="mt-1 block text-xs uppercase tracking-[0.14em] text-ink/60">
                       {s.label}
                     </dt>
                   </div>
@@ -187,13 +188,18 @@ export default async function HomePage() {
           <Reveal delay={200} className="relative mt-6 block lg:mt-0">
             <div className="relative mx-auto max-w-md pb-8 pl-2 sm:pl-0 lg:max-w-none lg:pb-8">
               <img
-                src="/images/hero/office-1.jpg"
+                src="/images/hero/office-1.webp"
                 alt="Modern office interior lit by commercial LED fixtures"
+                width={816}
+                height={901}
+                fetchPriority="high"
                 className="aspect-[4/5] w-3/4 rounded-2xl border border-line object-cover shadow-[0_30px_70px_rgba(16,24,40,0.18)]"
               />
               <img
-                src="/images/extras/resturant.png"
+                src="/images/extras/resturant.webp"
                 alt="Restaurant dining room with pendant lighting"
+                width={368}
+                height={406}
                 className="absolute -bottom-2 right-0 aspect-square w-1/2 rounded-2xl border-4 border-amber object-cover shadow-[0_24px_60px_rgba(16,24,40,0.22)] sm:-bottom-8"
               />
               <figure className="absolute -left-1 -top-4 w-52 rounded-2xl border border-line bg-white p-4 shadow-[0_20px_50px_rgba(16,24,40,0.14)] sm:-left-4 sm:-top-6 sm:w-64">
@@ -205,7 +211,7 @@ export default async function HomePage() {
                 <blockquote className="mt-2 text-[13px] leading-snug text-ink/75">
                   &ldquo;Amazing service, great product also great price, highly recommended&rdquo;
                 </blockquote>
-                <figcaption className="mt-2 text-xs font-semibold text-ink/50">— Moe R., Google review</figcaption>
+                <figcaption className="mt-2 text-xs font-semibold text-ink/60">— Moe R., Google review</figcaption>
               </figure>
             </div>
           </Reveal>
@@ -214,7 +220,7 @@ export default async function HomePage() {
 
       {/* ── 4) BRANDS MARQUEE ────────────────────────────────────────────── */}
       <section className="border-b border-line bg-white py-10" aria-label="Brands we carry">
-        <p className="mb-6 text-center text-xs font-bold uppercase tracking-[0.24em] text-ink/40">
+        <p className="mb-6 text-center text-xs font-bold uppercase tracking-[0.24em] text-ink/60">
           Brands we carry
         </p>
         <div className="marquee overflow-hidden">
@@ -224,6 +230,8 @@ export default async function HomePage() {
                 key={`${logo.name}-${i}`}
                 src={logo.src}
                 alt={`${logo.name} logo`}
+                width={IMAGE_DIMS[logo.src]?.[0]}
+                height={IMAGE_DIMS[logo.src]?.[1]}
                 loading="lazy"
                 className="h-8 w-auto max-w-36 object-contain opacity-50 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
               />
@@ -314,6 +322,8 @@ export default async function HomePage() {
                       <img
                         src={collection.image}
                         alt={`${collection.name} — application photo`}
+                        width={IMAGE_DIMS[collection.image]?.[0]}
+                        height={IMAGE_DIMS[collection.image]?.[1]}
                         loading="lazy"
                         className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
                       />
@@ -353,6 +363,8 @@ export default async function HomePage() {
                     <img
                       src={ind.image}
                       alt={`${ind.title} lighting application`}
+                      width={IMAGE_DIMS[ind.image]?.[0]}
+                      height={IMAGE_DIMS[ind.image]?.[1]}
                       loading="lazy"
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
                     />
@@ -414,8 +426,10 @@ export default async function HomePage() {
           <Reveal delay={140}>
             <div className="grid gap-5 sm:grid-cols-2">
               <img
-                src="/images/hero/office-1.jpg"
+                src="/images/hero/office-1.webp"
                 alt="Commercial office fitted with GSW lighting"
+                width={816}
+                height={901}
                 loading="lazy"
                 className="h-64 w-full rounded-2xl border border-line object-cover"
               />

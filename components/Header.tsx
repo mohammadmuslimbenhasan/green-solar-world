@@ -70,7 +70,7 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3.5 sm:px-6">
-        <Link href="/" className="group flex items-center gap-3" aria-label="Green Solar World Inc. — home">
+        <Link href="/" className="group flex items-center gap-3">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/logo-mark.png"

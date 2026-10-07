@@ -1,7 +1,7 @@
 {
   "products": {
     "shahab": {
-      "image": "products/shahab.jpg",
+      "image": "products/shahab.webp",
       "title": "Shahab"
     },
     "test": {
@@ -9,42 +9,42 @@
       "title": "Test Product"
     },
     "100w-120w-traditional-led-wallpack": {
-      "image": "products/100w-120w-traditional-led-wallpack.jpg",
+      "image": "products/100w-120w-traditional-led-wallpack.webp",
       "title": "100w/120w Traditional LED Wallpack"
     },
     "led-flood-parking-lot-street-light": {
-      "image": "products/led-flood-parking-lot-street-light.jpg",
+      "image": "products/led-flood-parking-lot-street-light.webp",
       "title": "LED Flood/ Parking Lot/ Street Light"
     },
     "asymmetric-flood-lights": {
-      "image": "products/asymmetric-flood-lights.jpg",
+      "image": "products/asymmetric-flood-lights.webp",
       "title": "Asymmetric Flood Lights"
     },
     "jc-10w-a": {
-      "image": "products/jc-10w-a.png",
+      "image": "products/jc-10w-a.webp",
       "title": "JC-10W-A"
     }
   },
   "extras": [
     {
       "slug": "2-1",
-      "file": "extras/2-1.jpg"
+      "file": "extras/2-1.webp"
     },
     {
       "slug": "3-3",
-      "file": "extras/3-3.jpg"
+      "file": "extras/3-3.webp"
     },
     {
       "slug": "photo-1497366754035-f200968a6e72",
-      "file": "extras/photo-1497366754035-f200968a6e72.jpeg"
+      "file": "extras/photo-1497366754035-f200968a6e72.webp"
     },
     {
       "slug": "photo-1530545233050-3f0a5d0dd1ac",
-      "file": "extras/photo-1530545233050-3f0a5d0dd1ac.jpeg"
+      "file": "extras/photo-1530545233050-3f0a5d0dd1ac.webp"
     },
     {
       "slug": "screenshot-2019-07-19-at-2-08-01-pm",
-      "file": "extras/screenshot-2019-07-19-at-2-08-01-pm.png"
+      "file": "extras/screenshot-2019-07-19-at-2-08-01-pm.webp"
     },
     {
       "slug": "logo-fnl",
@@ -60,7 +60,7 @@
     },
     {
       "slug": "logo-2",
-      "file": "extras/logo-2.png"
+      "file": "extras/logo-2.webp"
     },
     {
       "slug": "liteline_logo_horizontal",
@@ -72,15 +72,15 @@
     },
     {
       "slug": "banvil",
-      "file": "extras/banvil.png"
+      "file": "extras/banvil.webp"
     },
     {
       "slug": "nsi-blackred-logo",
-      "file": "extras/nsi-blackred-logo.png"
+      "file": "extras/nsi-blackred-logo.webp"
     },
     {
       "slug": "logo-temp",
-      "file": "extras/logo-temp.png"
+      "file": "extras/logo-temp.webp"
     },
     {
       "slug": "nesco_official_logo",
@@ -92,27 +92,27 @@
     },
     {
       "slug": "etlin-logo",
-      "file": "extras/etlin-logo.png"
+      "file": "extras/etlin-logo.webp"
     },
     {
       "slug": "resturant",
-      "file": "extras/resturant.png"
+      "file": "extras/resturant.webp"
     },
     {
       "slug": "electri",
-      "file": "extras/electri.jpg"
+      "file": "extras/electri.webp"
     },
     {
       "slug": "acrylic-white-lens-step-light-photocell-mini",
-      "file": "extras/acrylic-white-lens-step-light-photocell-mini.png"
+      "file": "extras/acrylic-white-lens-step-light-photocell-mini.webp"
     },
     {
       "slug": "led-step-light-1",
-      "file": "extras/led-step-light-1.jpg"
+      "file": "extras/led-step-light-1.webp"
     },
     {
       "slug": "h5",
-      "file": "extras/h5.jpg"
+      "file": "extras/h5.webp"
     },
     {
       "slug": "4-inch-mounting-plate",
@@ -120,7 +120,7 @@
     },
     {
       "slug": "4-inch-par-20-line-voltage-ic",
-      "file": "extras/4-inch-par-20-line-voltage-ic.png"
+      "file": "extras/4-inch-par-20-line-voltage-ic.webp"
     },
     {
       "slug": "h2",
@@ -128,55 +128,55 @@
     },
     {
       "slug": "8-inch-slim",
-      "file": "extras/8-inch-slim.jpg"
+      "file": "extras/8-inch-slim.webp"
     },
     {
       "slug": "5pro-2",
-      "file": "extras/5pro-2.png"
+      "file": "extras/5pro-2.webp"
     },
     {
       "slug": "flush-mount-ceiling-light-brochure-101612181423-inch",
-      "file": "extras/flush-mount-ceiling-light-brochure-101612181423-inch.png"
+      "file": "extras/flush-mount-ceiling-light-brochure-101612181423-inch.webp"
     },
     {
       "slug": "flush-mount",
-      "file": "extras/flush-mount.png"
+      "file": "extras/flush-mount.webp"
     },
     {
       "slug": "3pro-2",
-      "file": "extras/3pro-2.png"
+      "file": "extras/3pro-2.webp"
     },
     {
       "slug": "4pro",
-      "file": "extras/4pro.png"
+      "file": "extras/4pro.webp"
     },
     {
       "slug": "3pro",
-      "file": "extras/3pro.png"
+      "file": "extras/3pro.webp"
     },
     {
       "slug": "5pro",
-      "file": "extras/5pro.png"
+      "file": "extras/5pro.webp"
     },
     {
       "slug": "strip-1",
-      "file": "extras/strip-1.png"
+      "file": "extras/strip-1.webp"
     },
     {
       "slug": "wkiaivjuzsv4blkpaaivgogo4o4784",
-      "file": "extras/wkiaivjuzsv4blkpaaivgogo4o4784.jpg"
+      "file": "extras/wkiaivjuzsv4blkpaaivgogo4o4784.webp"
     },
     {
       "slug": "wkiaivjjixpkthfwaabrpywb_je576",
-      "file": "extras/wkiaivjjixpkthfwaabrpywb_je576.png"
+      "file": "extras/wkiaivjjixpkthfwaabrpywb_je576.webp"
     },
     {
       "slug": "wkiaivjqowbbwj1vaaogkclnjng531",
-      "file": "extras/wkiaivjqowbbwj1vaaogkclnjng531.jpg"
+      "file": "extras/wkiaivjqowbbwj1vaaogkclnjng531.webp"
     },
     {
       "slug": "wkiaivjqmycfsa2taaemtkibiwe630",
-      "file": "extras/wkiaivjqmycfsa2taaemtkibiwe630.jpg"
+      "file": "extras/wkiaivjqmycfsa2taaemtkibiwe630.webp"
     },
     {
       "slug": "puck-lights",
@@ -192,55 +192,55 @@
     },
     {
       "slug": "wall-pack",
-      "file": "extras/wall-pack.jpg"
+      "file": "extras/wall-pack.webp"
     },
     {
       "slug": "led-parking-lot-lights-led-shoe-box-lamp-2",
-      "file": "extras/led-parking-lot-lights-led-shoe-box-lamp-2.jpg"
+      "file": "extras/led-parking-lot-lights-led-shoe-box-lamp-2.webp"
     },
     {
       "slug": "led-parking-lot-lights-led-shoe-box-lamp",
-      "file": "extras/led-parking-lot-lights-led-shoe-box-lamp.jpg"
+      "file": "extras/led-parking-lot-lights-led-shoe-box-lamp.webp"
     },
     {
       "slug": "wkiaivju86vw_gahaalbzp_8yck611",
-      "file": "extras/wkiaivju86vw_gahaalbzp_8yck611.jpg"
+      "file": "extras/wkiaivju86vw_gahaalbzp_8yck611.webp"
     },
     {
       "slug": "wkiaivjrisamsnl_aan0m82brpw778",
-      "file": "extras/wkiaivjrisamsnl_aan0m82brpw778.jpg"
+      "file": "extras/wkiaivjrisamsnl_aan0m82brpw778.webp"
     },
     {
       "slug": "wkiaivjrinasj-ppaapefrwc_n4406",
-      "file": "extras/wkiaivjrinasj-ppaapefrwc_n4406.jpg"
+      "file": "extras/wkiaivjrinasj-ppaapefrwc_n4406.webp"
     },
     {
       "slug": "wkiaivjril6szn7paaynspzi7ig444",
-      "file": "extras/wkiaivjril6szn7paaynspzi7ig444.jpg"
+      "file": "extras/wkiaivjril6szn7paaynspzi7ig444.webp"
     },
     {
       "slug": "wkiaivjqw9atsnquaahw9r9fqti541",
-      "file": "extras/wkiaivjqw9atsnquaahw9r9fqti541.jpg"
+      "file": "extras/wkiaivjqw9atsnquaahw9r9fqti541.webp"
     },
     {
       "slug": "screenshot_2-1",
-      "file": "extras/screenshot_2-1.png"
+      "file": "extras/screenshot_2-1.webp"
     },
     {
       "slug": "untitled-1",
-      "file": "extras/untitled-1.jpg"
+      "file": "extras/untitled-1.webp"
     },
     {
       "slug": "lsixth",
-      "file": "extras/lsixth.jpg"
+      "file": "extras/lsixth.webp"
     },
     {
       "slug": "label",
-      "file": "extras/label.jpg"
+      "file": "extras/label.webp"
     },
     {
       "slug": "screenshot_3-1",
-      "file": "extras/screenshot_3-1.png"
+      "file": "extras/screenshot_3-1.webp"
     },
     {
       "slug": "l2",
@@ -248,27 +248,27 @@
     },
     {
       "slug": "c2",
-      "file": "extras/c2.png"
+      "file": "extras/c2.webp"
     },
     {
       "slug": "3-2",
-      "file": "extras/3-2.jpg"
+      "file": "extras/3-2.webp"
     },
     {
       "slug": "2-2",
-      "file": "extras/2-2.jpg"
+      "file": "extras/2-2.webp"
     },
     {
       "slug": "1-2",
-      "file": "extras/1-2.jpg"
+      "file": "extras/1-2.webp"
     },
     {
       "slug": "2",
-      "file": "extras/2.jpg"
+      "file": "extras/2.webp"
     },
     {
       "slug": "1",
-      "file": "extras/1.jpg"
+      "file": "extras/1.webp"
     },
     {
       "slug": "4",
