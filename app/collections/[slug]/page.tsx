@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: content?.metaTitle ?? collection.name,
     description: content?.metaDescription ?? collection.description,
     alternates: { canonical: `/collections/${collection.slug}/` },
-    openGraph: { title: `${collection.name} | Green Solar World`, description: collection.tagline },
+    openGraph: { title: `${collection.name} | Green Solar World Inc.`, description: collection.tagline },
   };
 }
 

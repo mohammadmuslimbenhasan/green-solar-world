@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Reveal from '@/components/Reveal';
 import ReviewsCarousel from '@/components/Reviews';
+import JsonLd, { breadcrumbSchema } from '@/components/JsonLd';
 import { getReviews } from '@/lib/data';
 import { SITE } from '@/data/catalog';
 import { gbpAggregate, GBP_URL } from '@/data/reviews';
@@ -46,6 +47,8 @@ export default async function AboutPage() {
 
   return (
     <>
+      <JsonLd data={breadcrumbSchema([{ name: 'About', url: '/about/' }])} />
+
       {/* Hero */}
       <section className="pattern-light border-b border-line">
         <div className="mx-auto max-w-7xl px-6 py-20">

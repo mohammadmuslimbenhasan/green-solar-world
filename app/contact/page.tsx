@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
 import Reveal from '@/components/Reveal';
 import ContactForm from '@/components/ContactForm';
+import JsonLd, { breadcrumbSchema } from '@/components/JsonLd';
 import { SITE } from '@/data/catalog';
 import { gbpAggregate, GBP_URL } from '@/data/reviews';
 
 export const metadata: Metadata = {
-  title: 'Contact Electrical Supplier Mississauga | Green Solar World',
+  title: 'Contact Electrical Supplier Mississauga | Green Solar World Inc.',
   description:
     'Contact Green Solar World Inc — your electrical supplier in Mississauga. 4615 Burgoyne St. Tel 905-282-9242, mobile 416-951-2650. Wholesale lighting & electrical inquiries welcome.',
   alternates: { canonical: '/contact/' },
@@ -45,6 +46,8 @@ const CARDS = [
 export default function ContactPage() {
   return (
     <>
+      <JsonLd data={breadcrumbSchema([{ name: 'Contact', url: '/contact/' }])} />
+
       <section className="pattern-light border-b border-line">
         <div className="mx-auto max-w-7xl px-6 py-20">
           <Reveal>

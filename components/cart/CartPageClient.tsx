@@ -40,7 +40,7 @@ export default function CartPageClient() {
       `Shipping (flat): $${cart.shipping.toFixed(2)}`,
       `Total: $${cart.total.toFixed(2)}`,
     ];
-    return `mailto:${SITE.email}?subject=${encodeURIComponent('Order Request — Green Solar World')}&body=${encodeURIComponent(lines.join('\n'))}`;
+    return `mailto:${SITE.email}?subject=${encodeURIComponent('Order Request — Green Solar World Inc.')}&body=${encodeURIComponent(lines.join('\n'))}`;
   }, [cart.lines, cart.subtotal, cart.shipping, cart.total]);
 
   const valid = form.name.trim() && form.phone.trim();
