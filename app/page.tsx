@@ -253,7 +253,7 @@ export default async function HomePage() {
                 </span>
                 <div>
                   <h2 className="font-display text-base font-bold text-ink">{t.title}</h2>
-                  <p className="mt-1 text-sm leading-relaxed text-ink/55">{t.text}</p>
+                  <p className="mt-1 text-sm leading-relaxed text-ink/65">{t.text}</p>
                 </div>
               </div>
             </Reveal>
@@ -334,7 +334,7 @@ export default async function HomePage() {
                     </div>
                   )}
                   <div className="p-7">
-                    <p className="text-sm leading-relaxed text-ink/55">{c.copy}</p>
+                    <p className="text-sm leading-relaxed text-ink/65">{c.copy}</p>
                     <p className="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-amber-deep">
                       {count} categories · {items} products →
                     </p>
@@ -371,7 +371,7 @@ export default async function HomePage() {
                   </div>
                   <div className="p-6">
                     <h3 className="font-display text-xl font-bold text-ink">{ind.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-ink/55">{ind.text}</p>
+                    <p className="mt-2 text-sm leading-relaxed text-ink/65">{ind.text}</p>
                   </div>
                 </div>
               </Reveal>
@@ -388,7 +388,7 @@ export default async function HomePage() {
             <h2 className="mt-2 font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl">
               {gbpAggregate.rating.toFixed(1)} Stars on Google
             </h2>
-            <p className="mt-3 text-sm text-ink/50">
+            <p className="mt-3 text-sm text-ink/65">
               Based on {gbpAggregate.reviewCount} Google reviews from contractors and homeowners.
             </p>
           </Reveal>

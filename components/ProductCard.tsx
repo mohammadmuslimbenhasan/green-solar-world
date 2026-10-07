@@ -48,10 +48,10 @@ export default function ProductCard({ product, priority = false }: { product: Pr
           <div>
             <p className="font-display text-lg font-bold text-ink">
               {formatPrice(product.price)}
-              <span className="ml-1 text-[11px] font-medium text-ink/40">CAD</span>
+              <span className="ml-1 text-[11px] font-medium text-ink/65">CAD</span>
             </p>
             {product.compareAt && (
-              <p className="text-xs text-ink/35 line-through">{formatPrice(product.compareAt)}</p>
+              <p className="text-xs text-ink/60 line-through">{formatPrice(product.compareAt)}</p>
             )}
           </div>
           <AddToCartButton product={product} className="px-3.5 py-2 text-xs" />
