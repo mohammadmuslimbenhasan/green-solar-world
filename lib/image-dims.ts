@@ -77,7 +77,7 @@ export const IMAGE_DIMS: Record<string, readonly [number, number]> = {
   "/images/hero/office-1.webp": [816, 901],
   "/images/hero/office-2.webp": [623, 686],
   "/images/logo-full.png": [105, 84],
-  "/images/logo-mark.png": [61, 52],
+  "/images/logo-mark.png": [128, 109],
   "/images/logo.jpg": [170, 95],
   "/images/products/100w-120w-traditional-led-wallpack.webp": [300, 300],
   "/images/products/asymmetric-flood-lights.webp": [320, 320],

@@ -75,8 +75,8 @@ export default function Header() {
           <img
             src="/images/logo-mark.png"
             alt="Green Solar World Inc."
-            width={61}
-            height={52}
+            width={128}
+            height={109}
             className="h-10 w-auto transition-transform group-hover:scale-105"
           />
           <span className="leading-tight">

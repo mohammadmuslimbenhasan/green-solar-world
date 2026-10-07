@@ -36,7 +36,7 @@ export default async function Footer() {
         <div>
           <div className="flex items-center justify-center gap-3 md:justify-start">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/logo-mark.png" alt="Green Solar World Inc." width={61} height={52} className="h-9 w-auto" />
+            <img src="/images/logo-mark.png" alt="Green Solar World Inc." width={128} height={109} className="h-9 w-auto" />
             <span className="font-display text-lg font-bold">Green Solar World Inc.</span>
           </div>
           <p className="mt-4 text-sm leading-relaxed text-bone/60">

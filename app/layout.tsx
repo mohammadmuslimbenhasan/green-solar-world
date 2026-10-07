@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { Inter, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import { CartProvider } from '@/components/cart/CartContext';
@@ -48,6 +49,23 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en-CA" className={`${inter.variable} ${spaceGrotesk.variable}`}>
+      {/* Pre-paint: reveal above-the-fold .reveal content without waiting for hydration (LCP). */}
+      <Script id="reveal-paint" strategy="beforeInteractive">{`
+        (function () {
+          function reveal() {
+            var h = window.innerHeight;
+            document.querySelectorAll('.reveal:not(.is-visible)').forEach(function (el) {
+              var r = el.getBoundingClientRect();
+              if (r.top < h && r.bottom > 0) el.classList.add('is-visible');
+            });
+          }
+          if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', reveal);
+          } else {
+            reveal();
+          }
+        })();
+      `}</Script>
       {/* suppressHydrationWarning: browser extensions (e.g. cz-shortcut-listen) inject body attributes pre-hydration */}
       <body className="min-h-screen bg-paper font-body text-ink" suppressHydrationWarning>
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
