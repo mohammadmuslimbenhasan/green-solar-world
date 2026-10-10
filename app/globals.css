@@ -104,15 +104,23 @@ body {
   animation: pulse-dot 2.2s infinite;
 }
 
-/* ── Brand marquee (pause on hover) ────────────────────────────────────── */
+/* ── Brand marquee rows (pause on hover; second row runs reverse) ─────── */
 @keyframes marquee {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
-.marquee-track {
-  animation: marquee 32s linear infinite;
+@keyframes marquee-reverse {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
 }
-.marquee:hover .marquee-track {
+.marquee-track {
+  animation: marquee 36s linear infinite;
+}
+.marquee-track-reverse {
+  animation: marquee-reverse 36s linear infinite;
+}
+.marquee:hover .marquee-track,
+.marquee:hover .marquee-track-reverse {
   animation-play-state: paused;
 }
 
