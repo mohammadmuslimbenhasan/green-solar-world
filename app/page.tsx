@@ -218,34 +218,66 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ── 4) BRANDS MARQUEE ────────────────────────────────────────────── */}
-      <section className="border-b border-line bg-white py-10" aria-label="Brands we carry">
-        <p className="mb-6 text-center text-xs font-bold uppercase tracking-[0.24em] text-ink/60">
-          Brands we carry
-        </p>
-        <div className="marquee overflow-hidden">
-          <div className="marquee-track flex w-max items-center gap-8 px-5 sm:gap-14 sm:px-7">
-            {[...BRAND_LOGOS, ...BRAND_LOGOS].map((logo, i) => (
-              <a
-                key={`${logo.name}-${i}`}
-                href={logo.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`${logo.name} — visit manufacturer website`}
-                className="opacity-50 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
-              >
-                <img
-                  src={logo.src}
-                  alt={`${logo.name} logo`}
-                  width={IMAGE_DIMS[logo.src]?.[0]}
-                  height={IMAGE_DIMS[logo.src]?.[1]}
-                  loading="lazy"
-                  className="h-8 w-auto max-w-36 object-contain"
-                />
-              </a>
-            ))}
-          </div>
+      {/* ── 4) BRANDS — AUTHORIZED DISTRIBUTOR ───────────────────────────── */}
+      <section className="border-b border-line bg-white py-16 sm:py-20" aria-label="Brands we distribute">
+        <div className="mx-auto max-w-7xl px-6">
+          <Reveal className="mx-auto max-w-2xl text-center">
+            <p className="inline-flex items-center gap-2 rounded-full border border-amber/50 bg-amber/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-amber-deep">
+              <svg viewBox="0 0 16 16" className="h-3.5 w-3.5" fill="currentColor" aria-hidden="true">
+                <path d="M8 1l2 1.8 2.7-.4.7 2.6 2.3 1.4-1.1 2.5 1.1 2.5-2.3 1.4-.7 2.6-2.7-.4L8 15l-2-1.8-2.7.4-.7-2.6L.3 9.6l1.1-2.5L.3 4.6l2.3-1.4.7-2.6 2.7.4L8 1zm-1.2 9.6 4-4-.9-.9-3.1 3.1-1.5-1.5-.9.9 2.3 2.3.1.1z" />
+              </svg>
+              Authorized Distributor
+            </p>
+            <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+              We Distribute &amp; Sell Products From These Brands
+            </h2>
+            <p className="mt-4 leading-relaxed text-ink/65">
+              Green Solar World Inc. is an authorized Canadian distributor for every manufacturer
+              below. We stock and sell their full product lines at true wholesale pricing — from a
+              single part number to a complete job quote. Need a cut sheet, a spec, or pricing on any
+              of their products? One call to our Mississauga counter gets it done.
+            </p>
+            <Link
+              href="/contact/"
+              className="mt-6 inline-flex items-center gap-2 rounded-xl border border-ink/15 bg-white px-6 py-3 font-display text-sm font-bold uppercase tracking-wide text-ink transition-colors hover:border-amber hover:text-amber-deep"
+            >
+              Ask About a Brand&rsquo;s Products
+              <svg viewBox="0 0 16 16" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M2 8h11M9 3l5 5-5 5" />
+              </svg>
+            </Link>
+          </Reveal>
         </div>
+        <Reveal delay={120} className="mt-12">
+          <div className="marquee overflow-hidden">
+            <div className="marquee-track flex w-max items-center gap-8 px-5 sm:gap-14 sm:px-7">
+              {[...BRAND_LOGOS, ...BRAND_LOGOS].map((logo, i) => (
+                <a
+                  key={`${logo.name}-${i}`}
+                  href={logo.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${logo.name} — visit manufacturer website`}
+                  className="opacity-60 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
+                >
+                  <img
+                    src={logo.src}
+                    alt={`${logo.name} logo`}
+                    width={IMAGE_DIMS[logo.src]?.[0]}
+                    height={IMAGE_DIMS[logo.src]?.[1]}
+                    loading="lazy"
+                    className="h-10 w-auto max-w-40 object-contain"
+                  />
+                </a>
+              ))}
+            </div>
+          </div>
+        </Reveal>
+        <p className="mt-8 text-center text-xs text-ink/60">
+          Click any logo to visit the manufacturer&rsquo;s website — then call us at{' '}
+          <a href={`tel:${SITE.mobile}`} className="font-semibold text-amber-deep hover:underline">{SITE.orderPhoneDisplay}</a>{' '}
+          to order their products at wholesale.
+        </p>
       </section>
 
       {/* ── 5) TRUST STRIP ───────────────────────────────────────────────── */}
