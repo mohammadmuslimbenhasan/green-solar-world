@@ -226,15 +226,23 @@ export default async function HomePage() {
         <div className="marquee overflow-hidden">
           <div className="marquee-track flex w-max items-center gap-8 px-5 sm:gap-14 sm:px-7">
             {[...BRAND_LOGOS, ...BRAND_LOGOS].map((logo, i) => (
-              <img
+              <a
                 key={`${logo.name}-${i}`}
-                src={logo.src}
-                alt={`${logo.name} logo`}
-                width={IMAGE_DIMS[logo.src]?.[0]}
-                height={IMAGE_DIMS[logo.src]?.[1]}
-                loading="lazy"
-                className="h-8 w-auto max-w-36 object-contain opacity-50 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
-              />
+                href={logo.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${logo.name} — visit manufacturer website`}
+                className="opacity-50 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
+              >
+                <img
+                  src={logo.src}
+                  alt={`${logo.name} logo`}
+                  width={IMAGE_DIMS[logo.src]?.[0]}
+                  height={IMAGE_DIMS[logo.src]?.[1]}
+                  loading="lazy"
+                  className="h-8 w-auto max-w-36 object-contain"
+                />
+              </a>
             ))}
           </div>
         </div>

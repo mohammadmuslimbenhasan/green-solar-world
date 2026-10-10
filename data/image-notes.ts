@@ -108,18 +108,24 @@ export const CATEGORY_IMAGE_POOL: Partial<Record<CategorySlug, string[]>> = {
   device: ['/images/hero/office-2.webp', '/images/extras/electri.webp'],
 };
 
-/** Verified brand logos for the homepage marquee. */
-export const BRAND_LOGOS: { src: string; name: string }[] = [
-  { src: '/images/brands/etlin.webp', name: 'Etlin-Daniels' },
-  { src: '/images/brands/texcan.png', name: 'Texcan' },
-  { src: '/images/brands/vista.png', name: 'Vista' },
-  { src: '/images/extras/liteline_logo_horizontal.gif', name: 'Liteline' },
-  { src: '/images/brands/banvil.webp', name: 'Banvil 2000' },
-  { src: '/images/brands/nsi.webp', name: 'NSI Industries' },
-  { src: '/images/brands/nesco.png', name: 'Nesco' },
-  { src: '/images/brands/fnl.png', name: 'Everbright' },
-  { src: '/images/brands/brand-1.png', name: 'Paulin' },
-  { src: '/images/brands/brand-2.webp', name: 'Volt6' },
-  { src: '/images/extras/logo-temp.webp', name: 'Reno LED' },
-  { src: '/images/extras/logo_en.png', name: 'ETL Listed' },
+/**
+ * Manufacturer brands Green Solar World Inc. distributes — rendered as a
+ * linked logo marquee on the homepage. Logos are the brands' own favicons /
+ * supplied marks; each links to the manufacturer's official site.
+ */
+export const BRAND_LOGOS: { src: string; name: string; href: string }[] = [
+  { src: '/images/brands/dals.webp', name: 'Dals Lighting', href: 'https://dals.com' },
+  { src: '/images/extras/logo-temp.webp', name: 'Reno Lighting', href: 'https://www.ca.renolighting.com/' },
+  { src: '/images/brands/hi-bright.webp', name: 'Hi-Bright', href: 'https://hi-bright.ca/' },
+  { src: '/images/brands/etlin.webp', name: 'Etlin Daniels', href: 'https://etlin-daniels.com/' },
+  { src: '/images/brands/in-lite.webp', name: 'in-lite', href: 'https://in-lite.com/en-CA' },
+  { src: '/images/brands/ortech.webp', name: 'Ortech Industries', href: 'https://ortechindustries.ca/' },
+  { src: '/images/brands/canolight.webp', name: 'Canolight', href: 'https://www.canolight.ca/' },
+  { src: '/images/brands/votatec.webp', name: 'Votatec', href: 'https://votatec.ca/' },
+  { src: '/images/brands/danfoss.webp', name: 'Danfoss', href: 'https://www.danfoss.com/' },
+  { src: '/images/brands/aifittings.webp', name: 'A.I. Fittings', href: 'https://www.aifittings.com/' },
+  { src: '/images/brands/nesco.png', name: 'Nesco Canada', href: 'https://www.nescocanada.com/' },
+  { src: '/images/brands/rack-a-tiers.webp', name: 'Rack-A-Tiers', href: 'https://rack-a-tiers.ca/' },
+  { src: '/images/brands/dawnray.webp', name: 'DawnRay', href: 'https://dawnray.space/' },
+  { src: '/images/brands/greenlite.webp', name: 'Greenlite', href: 'https://www.greenlite.com/' },
 ];

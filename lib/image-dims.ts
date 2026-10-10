@@ -2,6 +2,17 @@
 // asset in public/images. Used to size <img> tags (width/height attrs prevent CLS).
 // Keyed by site path (e.g. /images/extras/foo.webp).
 export const IMAGE_DIMS: Record<string, readonly [number, number]> = {
+"/images/brands/dals.webp": [128, 128],
+  "/images/brands/hi-bright.webp": [48, 48],
+  "/images/brands/in-lite.webp": [128, 128],
+  "/images/brands/ortech.webp": [128, 128],
+  "/images/brands/canolight.webp": [128, 128],
+  "/images/brands/votatec.webp": [128, 128],
+  "/images/brands/danfoss.webp": [32, 32],
+  "/images/brands/aifittings.webp": [32, 32],
+  "/images/brands/rack-a-tiers.webp": [76, 76],
+  "/images/brands/dawnray.webp": [128, 128],
+  "/images/brands/greenlite.webp": [128, 128],
   "/images/brands/banvil.webp": [250, 43],
   "/images/brands/brand-1.png": [178, 76],
   "/images/brands/brand-2.webp": [450, 190],
