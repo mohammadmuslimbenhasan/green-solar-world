@@ -10,6 +10,8 @@ const HELPERS: Record<string, string> = {
   social_instagram: 'Full Instagram profile URL — leave empty to hide the icon.',
   social_linkedin: 'Full LinkedIn company page URL — leave empty to hide the icon.',
   google_business_url: 'Your Google Business Profile link (reviews, directions). Shown as "Find us on Google".',
+  site_logo_url: 'Header/footer logo. Upload below or paste any image URL — leave empty to use the built-in logo.',
+  site_favicon_url: 'Browser tab icon. Upload below (square PNG/ICO works best) — leave empty for the built-in leaf mark.',
 };
 
 const LABELS: Record<string, string> = {
@@ -17,7 +19,99 @@ const LABELS: Record<string, string> = {
   social_instagram: 'Instagram URL',
   social_linkedin: 'LinkedIn URL',
   google_business_url: 'Google Business Profile URL',
+  site_logo_url: 'Site Logo',
+  site_favicon_url: 'Favicon',
 };
+
+/** Image upload row: preview + file picker + upload to Supabase Storage. */
+function ImageUpload({ label, helper, value, onUploaded }: {
+  label: string;
+  helper: string;
+  value: string;
+  onUploaded: (url: string) => void;
+}) {
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const upload = async (file: File) => {
+    setBusy(true);
+    setError(null);
+    try {
+      const fd = new FormData();
+      fd.append('file', file);
+      fd.append('kind', label === 'Site Logo' ? 'logo' : 'favicon');
+      const res = await fetch('/api/admin/upload', { method: 'POST', body: fd });
+      const body = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        setError(body.error ?? `Upload failed (${res.status})`);
+        return;
+      }
+      onUploaded(body.url);
+    } catch {
+      setError('Network error during upload');
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  return (
+    <div className="flex items-start gap-4">
+      <span className="grid h-16 w-16 shrink-0 place-items-center overflow-hidden rounded-xl border border-line bg-paper">
+        {value ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={value} alt={`${label} preview`} className="max-h-14 max-w-14 object-contain" />
+        ) : (
+          <svg viewBox="0 0 24 24" className="h-6 w-6 text-ink/25" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="3" />
+            <circle cx="9" cy="9" r="1.6" />
+            <path d="m5 18 5-5 3 3 3-3 3 3" />
+          </svg>
+        )}
+      </span>
+      <div className="min-w-0 flex-1">
+        <label className="block">
+          <span className={labelCls()}>{label}</span>
+          <input
+            className={inputCls()}
+            placeholder="https://… (or upload)"
+            value={value}
+            onChange={(e) => onUploaded(e.target.value)}
+          />
+          <span className="mt-1 block text-xs text-ink/40">{helper}</span>
+        </label>
+        <div className="mt-2 flex items-center gap-3">
+          <label className="inline-flex cursor-pointer items-center gap-2 rounded-lg border border-line px-3.5 py-2 text-xs font-bold uppercase tracking-wide text-ink/70 transition-colors hover:border-amber hover:text-ink">
+            <svg viewBox="0 0 16 16" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M8 11V3M4.5 6.5 8 3l3.5 3.5M3 13h10" />
+            </svg>
+            {busy ? 'Uploading…' : 'Upload File'}
+            <input
+              type="file"
+              accept="image/png,image/jpeg,image/webp,image/gif,image/svg+xml,image/x-icon"
+              className="sr-only"
+              disabled={busy}
+              onChange={(e) => {
+                const f = e.target.files?.[0];
+                if (f) void upload(f);
+                e.target.value = '';
+              }}
+            />
+          </label>
+          {value && (
+            <button
+              type="button"
+              onClick={() => onUploaded('')}
+              className="text-xs font-semibold text-ink/45 hover:text-red-400"
+            >
+              Reset to default
+            </button>
+          )}
+          {error && <span className="text-xs text-red-400" role="alert">{error}</span>}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function SettingsForm({ initial }: { initial: Record<string, string> }) {
   const router = useRouter();
@@ -47,18 +141,28 @@ export default function SettingsForm({ initial }: { initial: Record<string, stri
 
   return (
     <div className="space-y-5">
-      {Object.keys(LABELS).map((key) => (
-        <label key={key} className="block">
-          <span className={labelCls()}>{LABELS[key]}</span>
-          <input
-            className={inputCls()}
-            placeholder="https://…"
+      {Object.keys(LABELS).map((key) =>
+        key === 'site_logo_url' || key === 'site_favicon_url' ? (
+          <ImageUpload
+            key={key}
+            label={LABELS[key]}
+            helper={HELPERS[key]}
             value={values[key] ?? ''}
-            onChange={(e) => setValues((v) => ({ ...v, [key]: e.target.value }))}
+            onUploaded={(url) => setValues((v) => ({ ...v, [key]: url }))}
           />
-          <span className="mt-1 block text-xs text-ink/40">{HELPERS[key]}</span>
-        </label>
-      ))}
+        ) : (
+          <label key={key} className="block">
+            <span className={labelCls()}>{LABELS[key]}</span>
+            <input
+              className={inputCls()}
+              placeholder="https://…"
+              value={values[key] ?? ''}
+              onChange={(e) => setValues((v) => ({ ...v, [key]: e.target.value }))}
+            />
+            <span className="mt-1 block text-xs text-ink/40">{HELPERS[key]}</span>
+          </label>
+        )
+      )}
       <div className="flex items-center gap-3">
         <button type="button" onClick={() => void save()} disabled={busy}
           className="rounded-xl bg-electric px-6 py-3 text-sm font-bold text-ink disabled:opacity-60">

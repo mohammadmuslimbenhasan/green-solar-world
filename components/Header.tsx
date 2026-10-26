@@ -14,13 +14,14 @@ const NAV = [
   { href: '/contact/', label: 'Contact' },
 ];
 
-export default function Header() {
+export default function Header({ logoUrl }: { logoUrl?: string }) {
   const { count, lastAddedAt } = useCart();
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [bump, setBump] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [accountHref, setAccountHref] = useState('/login');
+  const logoSrc = logoUrl || '/images/logo-mark.png';
 
   useEffect(() => setOpen(false), [pathname]);
 
@@ -73,10 +74,10 @@ export default function Header() {
         <Link href="/" className="group flex items-center gap-3">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/logo-mark.png"
+            src={logoSrc}
             alt="Green Solar World Inc."
-            width={128}
-            height={109}
+            width={logoUrl ? undefined : 128}
+            height={logoUrl ? undefined : 109}
             className="h-10 w-auto transition-transform group-hover:scale-105"
           />
           <span className="leading-tight">

@@ -7,6 +7,7 @@ import Footer from '@/components/Footer';
 import PageProgress from '@/components/PageProgress';
 import JsonLd, { organizationSchema, websiteSchema } from '@/components/JsonLd';
 import { SITE } from '@/data/catalog';
+import { getSiteSettings } from '@/lib/data';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space-grotesk', display: 'swap' });
@@ -47,7 +48,8 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const settings = await getSiteSettings();
   return (
     <html lang="en-CA" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       {/* suppressHydrationWarning: browser extensions (e.g. cz-shortcut-listen) inject body attributes pre-hydration */}
@@ -58,7 +60,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             Flat ${SITE.shippingFlat} shipping Canada-wide · Mon–Fri 8–6, Sat 8–2 · Free pickup in Mississauga
           </div>
           <PageProgress />
-          <Header />
+          <Header logoUrl={settings.site_logo_url} />
           <main id="main">{children}</main>
           <Footer />
         </CartProvider>
