@@ -140,6 +140,17 @@ export default async function Footer() {
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-5 text-xs text-bone/60 sm:flex-row">
           <p>© {new Date().getFullYear()} {SITE.name} All rights reserved.</p>
           <p>Wholesale · Distribution · Technical Expertise — Mississauga, Ontario</p>
+          <p>
+            Design, Develop &amp; Marketing Partner:{' '}
+            <a
+              href="https://digitexcrew.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-amber transition-colors hover:text-amber/80 hover:underline"
+            >
+              Digitex Crew
+            </a>
+          </p>
         </div>
       </div>
     </footer>
