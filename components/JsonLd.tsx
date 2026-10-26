@@ -37,10 +37,10 @@ export function organizationSchema() {
     ],
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '4615 Burgoyne St.',
+      streetAddress: '5040 Maingate Dr, Unit 6',
       addressLocality: 'Mississauga',
       addressRegion: 'ON',
-      postalCode: 'L4W 1G3',
+      postalCode: 'L4W 1X5',
       addressCountry: 'CA',
     },
     hasMap: SITE.mapsUrl,

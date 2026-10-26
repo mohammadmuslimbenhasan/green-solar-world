@@ -11,7 +11,7 @@ export interface Review {
 }
 
 export const GBP_URL =
-  'https://www.google.com/maps/search/?api=1&query=Green+Solar+World+Inc+4615+Burgoyne+St+Mississauga+ON';
+  'https://www.google.com/maps/search/?api=1&query=Green+Solar+World+Inc+5040+Maingate+Dr+Unit+6+Mississauga+ON+L4W+1X5';
 
 export const gbpAggregate = {
   rating: 5.0,

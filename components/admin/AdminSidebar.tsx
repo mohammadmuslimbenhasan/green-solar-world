@@ -92,15 +92,17 @@ export default function AdminSidebar() {
               </svg>
               Back to Store
             </Link>
-            <Link
-              href="/logout"
-              className="flex items-center gap-3 rounded-lg px-3.5 py-2.5 text-sm font-medium text-ink/65 transition-colors hover:bg-ink/5 hover:text-red-400"
-            >
-              <svg viewBox="0 0 24 24" className="h-4.5 w-4.5" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9" />
-              </svg>
-              Sign Out
-            </Link>
+            <form action="/logout" method="post">
+              <button
+                type="submit"
+                className="flex w-full items-center gap-3 rounded-lg px-3.5 py-2.5 text-sm font-medium text-ink/65 transition-colors hover:bg-ink/5 hover:text-red-400"
+              >
+                <svg viewBox="0 0 24 24" className="h-4.5 w-4.5" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9" />
+                </svg>
+                Sign Out
+              </button>
+            </form>
           </div>
         </div>
       </aside>

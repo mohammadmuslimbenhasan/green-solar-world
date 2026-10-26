@@ -79,7 +79,7 @@ export default async function AboutPage() {
               </p>
               <p>{SITE.description}</p>
               <p>
-                From our counter at 4615 Burgoyne Street in Mississauga, we supply
+                From our counter at 5040 Maingate Dr Unit 6 in Mississauga, we supply
                 commercial, residential and industrial contractors across the GTA and
                 ship Canada-wide. Whether it is a full warehouse high-bay retrofit, a
                 multi-unit residential rough-in, or a single hard-to-find device, our

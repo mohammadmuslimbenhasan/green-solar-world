@@ -127,5 +127,5 @@ export const BRAND_LOGOS: { src: string; name: string; href: string }[] = [
   { src: '/images/brands/nesco.png', name: 'Nesco Canada', href: 'https://www.nescocanada.com/' },
   { src: '/images/brands/rack-a-tiers.webp', name: 'Rack-A-Tiers', href: 'https://rack-a-tiers.ca/' },
   { src: '/images/brands/dawnray.webp', name: 'DawnRay', href: 'https://dawnray.space/' },
-  { src: '/images/brands/greenlite.webp', name: 'Greenlite', href: 'https://www.greenlite.com/' },
+  { src: '/images/brands/greenlite.webp', name: 'Greenlite', href: 'https://www.greenliteusa.com/' },
 ];

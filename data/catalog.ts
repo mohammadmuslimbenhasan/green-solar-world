@@ -97,7 +97,7 @@ export const SITE = {
   tagline: 'GSW Provides High Quality Electrical Lighting Solutions',
   description:
     'GSW is an electrical and lighting distributor and wholesaler, offering a full line of high quality products along with dependable technical expertise and personalized customer service. With long experience in the trade, our team of experts can guide to choose the appropriate product for any specific type of job, be it commercial, residential or industrial.',
-  address: '4615 Burgoyne St., Mississauga ON L4W 1G3 Canada',
+  address: '5040 Maingate Dr Unit 6, Mississauga, ON L4W 1X5, Canada',
   phone: '905-282-9242',
   mobile: '416-951-2650',
   fax: '905-282-9262',
@@ -110,7 +110,7 @@ export const SITE = {
   shippingFlat: 30,
   orderPhoneDisplay: '+1 416-951-2650',
   mapsUrl:
-    'https://www.google.com/maps/search/?api=1&query=4615+Burgoyne+St+Mississauga+ON+L4W+1G3',
+    'https://www.google.com/maps/search/?api=1&query=5040+Maingate+Dr+Unit+6+Mississauga+ON+L4W+1X5',
 } as const;
 
 // Collection hero/card photos (verified — data/image-notes.ts).

@@ -8,7 +8,7 @@ import { gbpAggregate, GBP_URL } from '@/data/reviews';
 export const metadata: Metadata = {
   title: 'Contact Electrical Supplier Mississauga | Green Solar World Inc.',
   description:
-    'Contact Green Solar World Inc — your electrical supplier in Mississauga. 4615 Burgoyne St. Tel 905-282-9242, mobile 416-951-2650. Wholesale lighting & electrical inquiries welcome.',
+    'Contact Green Solar World Inc — your electrical supplier in Mississauga. 5040 Maingate Dr Unit 6. Tel 905-282-9242, mobile 416-951-2650. Wholesale lighting & electrical inquiries welcome.',
   alternates: { canonical: '/contact/' },
 };
 

@@ -79,7 +79,7 @@ const TRUST = [
 const HOME_FAQS = [
   {
     q: 'How much is shipping?',
-    a: `Flat $${SITE.shippingFlat} anywhere in Canada, on orders of any size. Prefer to pick up? Your order is free to collect at our Mississauga counter at 4615 Burgoyne St. — just call ahead and we will have it staged.`,
+    a: `Flat $${SITE.shippingFlat} anywhere in Canada, on orders of any size. Prefer to pick up? Your order is free to collect at our Mississauga counter at 5040 Maingate Dr Unit 6 — just call ahead and we will have it staged.`,
   },
   {
     q: 'Do you offer contractor pricing?',
@@ -472,7 +472,7 @@ export default async function HomePage() {
             </h2>
             <p className="mt-5 leading-relaxed text-ink/65">{SITE.description}</p>
             <p className="mt-4 leading-relaxed text-ink/65">
-              Our counter at 4615 Burgoyne Street sits minutes from the 401, 403 and 427 — the
+              Our counter at 5040 Maingate Dr Unit 6 sits minutes from the 401, 403 and 427 — the
               reason contractors from <strong className="font-semibold text-ink">Mississauga, Toronto, Brampton and the wider GTA</strong>{' '}
               treat GSW as their local electrical wholesaler, with flat $30 shipping reaching
               every province beyond.
