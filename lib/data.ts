@@ -150,23 +150,30 @@ export async function getReviews(): Promise<Review[]> {
   return bundledReviews;
 }
 
-/** Site settings — Supabase overrides bundled defaults. */
-export async function getSiteSettings(): Promise<SiteSettings> {
-  const supabase = getSupabase();
-  if (supabase) {
-    try {
-      const { data, error } = await supabase.from('site_settings').select('key, value');
-      if (!error && data) {
-        const merged = { ...defaultSiteSettings } as SiteSettings;
-        for (const row of data) {
-          const key = row.key as keyof SiteSettings;
-          if (key in merged && typeof row.value === 'string') merged[key] = row.value;
+/** Site settings — Supabase overrides bundled defaults. Cached 5 min so the
+ * root layout stays static-renderable and TTFB doesn't pay a DB round-trip. */
+import { unstable_cache } from 'next/cache';
+
+export const getSiteSettings = unstable_cache(
+  async (): Promise<SiteSettings> => {
+    const supabase = getSupabase();
+    if (supabase) {
+      try {
+        const { data, error } = await supabase.from('site_settings').select('key, value');
+        if (!error && data) {
+          const merged = { ...defaultSiteSettings } as SiteSettings;
+          for (const row of data) {
+            const key = row.key as keyof SiteSettings;
+            if (key in merged && typeof row.value === 'string') merged[key] = row.value;
+          }
+          return merged;
         }
-        return merged;
+      } catch {
+        // fall through
       }
-    } catch {
-      // fall through
     }
-  }
-  return { ...defaultSiteSettings };
-}
+    return { ...defaultSiteSettings };
+  },
+  ['site-settings'],
+  { revalidate: 300, tags: ['site-settings'] },
+);

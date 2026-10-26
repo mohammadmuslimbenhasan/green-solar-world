@@ -131,13 +131,13 @@ export default async function HomePage() {
         <link rel="preload" as="image" href="/images/hero/office-1.webp" fetchPriority="high" />
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 pb-20 pt-14 sm:pt-20 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="text-center lg:text-left">
-            <Reveal>
+            <Reveal instant>
               <p className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-amber-deep">
                 <span className="pulse-dot h-2 w-2 rounded-full bg-amber" />
                 Electrical &amp; Lighting Distributor — Mississauga, ON
               </p>
             </Reveal>
-            <Reveal>
+            <Reveal instant>
               <h1 className="mt-6 font-display text-[2.6rem] font-bold leading-[1.04] tracking-[-0.02em] text-ink sm:text-6xl lg:text-[4.2rem]">
                 Mississauga&rsquo;s Wholesale Electrical
                 <span className="relative whitespace-nowrap"> &amp; Lighting
@@ -147,14 +147,14 @@ export default async function HomePage() {
                 </span> Supplier.
               </h1>
             </Reveal>
-            <Reveal delay={180}>
+            <Reveal instant delay={180}>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink/65 lg:mx-0 mx-auto">
                 {SITE.tagline}. From our Mississauga counter we supply contractors with
                 wholesale LED lighting across Canada and electrical materials across the GTA —
                 with dependable technical expertise and personalized service.
               </p>
             </Reveal>
-            <Reveal delay={260}>
+            <Reveal instant delay={260}>
               <div className="mt-9 flex flex-wrap items-center justify-center gap-4 lg:justify-start">
                 <Link
                   href="/collections/"
@@ -176,7 +176,7 @@ export default async function HomePage() {
                 </a>
               </div>
             </Reveal>
-            <Reveal delay={320}>
+            <Reveal instant delay={320}>
               <a
                 href={GBP_URL}
                 target="_blank"
@@ -194,7 +194,7 @@ export default async function HomePage() {
             </Reveal>
 
             {/* Stats — figures are estimates for marketing purposes */}
-            <Reveal delay={380}>
+            <Reveal instant delay={380}>
               <dl className="mt-10 grid grid-cols-3 gap-4 border-t border-line pt-8 sm:gap-6">
                 {[
                   { value: 10, suffix: '+', label: 'Years in Business' },

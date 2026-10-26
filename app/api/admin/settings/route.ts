@@ -1,4 +1,4 @@
-import { revalidatePath } from 'next/cache';
+import { revalidatePath, revalidateTag } from 'next/cache';
 import { NextResponse } from 'next/server';
 import { requireAdminApi } from '@/lib/admin';
 
@@ -20,5 +20,6 @@ export async function PATCH(request: Request) {
 
   if (dbError) return NextResponse.json({ error: dbError.message }, { status: 500 });
   revalidatePath('/');
+  revalidateTag('site-settings');
   return NextResponse.json({ ok: true });
 }
