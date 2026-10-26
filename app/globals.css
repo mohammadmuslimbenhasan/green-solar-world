@@ -155,10 +155,3 @@ textarea:focus-visible {
   outline-offset: 2px;
 }
 
-/* ── Skip rendering off-screen sections on mobile (big Style&Layout savings) ── */
-@media (max-width: 768px) {
-  .cv-auto {
-    content-visibility: auto;
-    contain-intrinsic-size: auto 600px;
-  }
-}

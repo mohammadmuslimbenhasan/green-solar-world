@@ -249,7 +249,7 @@ export default async function HomePage() {
       </section>
 
       {/* ── 4) BRANDS — AUTHORIZED DISTRIBUTOR ───────────────────────────── */}
-      <section className="border-b border-line bg-white py-16 sm:py-20 cv-auto" aria-label="Brands we distribute">
+      <section className="border-b border-line bg-white py-16 sm:py-20" aria-label="Brands we distribute">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal className="mx-auto max-w-2xl text-center">
             <p className="inline-flex items-center gap-2 rounded-full border border-amber/50 bg-amber/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-amber-deep">
@@ -304,7 +304,7 @@ export default async function HomePage() {
       </section>
 
       {/* ── 5) TRUST STRIP ───────────────────────────────────────────────── */}
-      <section className="mx-auto max-w-7xl px-6 py-14 cv-auto">
+      <section className="mx-auto max-w-7xl px-6 py-14">
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {TRUST.map((t, i) => (
             <Reveal key={t.title} delay={i * 80}>
@@ -325,7 +325,7 @@ export default async function HomePage() {
       </section>
 
       {/* ── 6) FEATURED PRODUCTS ─────────────────────────────────────────── */}
-      <section className="border-t border-line bg-white py-20 cv-auto">
+      <section className="border-t border-line bg-white py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal className="flex flex-col items-center text-center sm:flex-row sm:items-end sm:justify-between sm:text-left">
             <div>
@@ -349,7 +349,7 @@ export default async function HomePage() {
       </section>
 
       {/* ── 7) COLLECTIONS ───────────────────────────────────────────────── */}
-      <section className="mx-auto max-w-7xl px-6 py-20 cv-auto">
+      <section className="mx-auto max-w-7xl px-6 py-20">
         <Reveal className="mx-auto max-w-3xl text-center sm:text-left">
           <p className="text-xs font-bold uppercase tracking-[0.22em] text-amber-deep">View Categories by Collections</p>
           <h2 className="mt-2 font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl">
@@ -410,7 +410,7 @@ export default async function HomePage() {
       </section>
 
       {/* ── 8) INDUSTRIES / APPLICATIONS ─────────────────────────────────── */}
-      <section className="border-t border-line bg-white py-20 cv-auto">
+      <section className="border-t border-line bg-white py-20">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal className="mx-auto max-w-2xl text-center sm:text-left">
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-amber-deep">Applications</p>
@@ -444,7 +444,7 @@ export default async function HomePage() {
       </section>
 
       {/* ── 9) REVIEWS ───────────────────────────────────────────────────── */}
-      <section className="border-t border-line py-20 cv-auto">
+      <section className="border-t border-line py-20">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal className="text-center">
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-amber-deep">Rated by the Trade</p>
@@ -462,7 +462,7 @@ export default async function HomePage() {
       </section>
 
       {/* ── 10) ABOUT TEASER + STATS ─────────────────────────────────────── */}
-      <section className="border-t border-line bg-white py-20 cv-auto">
+      <section className="border-t border-line bg-white py-20">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-2">
           <Reveal className="text-center lg:text-left">
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-amber-deep">About GSW</p>
@@ -518,7 +518,7 @@ export default async function HomePage() {
       </section>
 
       {/* ── 11) FAQ ──────────────────────────────────────────────────────── */}
-      <section className="mx-auto max-w-4xl px-6 py-20 cv-auto">
+      <section className="mx-auto max-w-4xl px-6 py-20">
         <Reveal className="text-center">
           <p className="text-xs font-bold uppercase tracking-[0.22em] text-amber-deep">Good to Know</p>
           <h2 className="mt-2 font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl">
@@ -531,7 +531,7 @@ export default async function HomePage() {
       </section>
 
       {/* ── 12) AMBER CTA BAND (the single contrasting dark-on-amber band) ── */}
-      <section className="bg-amber cv-auto">
+      <section className="bg-amber">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-6 px-6 py-16 text-center">
           <Reveal>
             <h2 className="mx-auto max-w-3xl font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl">

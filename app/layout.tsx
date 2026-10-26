@@ -9,8 +9,8 @@ import JsonLd, { organizationSchema, websiteSchema } from '@/components/JsonLd';
 import { SITE } from '@/data/catalog';
 import { getSiteSettings } from '@/lib/data';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
-const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space-grotesk', display: 'swap' });
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'optional' });
+const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space-grotesk', display: 'optional' });
 
 // Canonical domain — update NEXT_PUBLIC_SITE_URL in production (README).
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.greensolarworld.ca';
