@@ -155,3 +155,11 @@ textarea:focus-visible {
   outline-offset: 2px;
 }
 
+
+/* ── Skip rendering below-fold sections until scrolled near (mobile) ── */
+@media (max-width: 768px) {
+  .cv-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 700px;
+  }
+}
