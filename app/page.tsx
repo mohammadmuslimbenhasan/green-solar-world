@@ -32,16 +32,14 @@ function BrandCard({ logo }: { logo: { src: string; name: string; href: string }
       aria-label={`Visit ${logo.name} website`}
       className="group flex w-52 shrink-0 flex-col items-center gap-3 rounded-2xl border border-line bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-amber hover:shadow-[0_18px_44px_rgba(16,24,40,0.14)]"
     >
-      <span className="grid h-16 w-full place-items-center">
-        <img
-          src={logo.src}
-          alt={`${logo.name} logo`}
-          width={IMAGE_DIMS[logo.src]?.[0]}
-          height={IMAGE_DIMS[logo.src]?.[1]}
-          loading="lazy"
-          className="max-h-14 w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-110"
-        />
-      </span>
+      <img
+        src={logo.src}
+        alt={`${logo.name} logo`}
+        width={IMAGE_DIMS[logo.src]?.[0]}
+        height={IMAGE_DIMS[logo.src]?.[1]}
+        loading="lazy"
+        className="h-14 w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-110"
+      />
       <span className="font-display text-sm font-bold leading-tight text-ink">{logo.name}</span>
       <span className="mt-auto inline-flex items-center gap-1.5 rounded-full bg-ink/[0.05] px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-wide text-ink/70 transition-colors duration-300 group-hover:bg-amber group-hover:text-ink">
         Visit Website
@@ -130,6 +128,7 @@ export default async function HomePage() {
 
       {/* ── 3) HERO ──────────────────────────────────────────────────────── */}
       <section className="pattern-light border-b border-line">
+        <link rel="preload" as="image" href="/images/hero/office-1.webp" fetchPriority="high" />
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 pb-20 pt-14 sm:pt-20 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="text-center lg:text-left">
             <Reveal>
@@ -138,7 +137,7 @@ export default async function HomePage() {
                 Electrical &amp; Lighting Distributor — Mississauga, ON
               </p>
             </Reveal>
-            <Reveal delay={90}>
+            <Reveal>
               <h1 className="mt-6 font-display text-[2.6rem] font-bold leading-[1.04] tracking-[-0.02em] text-ink sm:text-6xl lg:text-[4.2rem]">
                 Mississauga&rsquo;s Wholesale Electrical
                 <span className="relative whitespace-nowrap"> &amp; Lighting
@@ -250,7 +249,7 @@ export default async function HomePage() {
       </section>
 
       {/* ── 4) BRANDS — AUTHORIZED DISTRIBUTOR ───────────────────────────── */}
-      <section className="border-b border-line bg-white py-16 sm:py-20" aria-label="Brands we distribute">
+      <section className="border-b border-line bg-white py-16 sm:py-20 cv-auto" aria-label="Brands we distribute">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal className="mx-auto max-w-2xl text-center">
             <p className="inline-flex items-center gap-2 rounded-full border border-amber/50 bg-amber/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-amber-deep">
@@ -305,7 +304,7 @@ export default async function HomePage() {
       </section>
 
       {/* ── 5) TRUST STRIP ───────────────────────────────────────────────── */}
-      <section className="mx-auto max-w-7xl px-6 py-14">
+      <section className="mx-auto max-w-7xl px-6 py-14 cv-auto">
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {TRUST.map((t, i) => (
             <Reveal key={t.title} delay={i * 80}>
@@ -326,7 +325,7 @@ export default async function HomePage() {
       </section>
 
       {/* ── 6) FEATURED PRODUCTS ─────────────────────────────────────────── */}
-      <section className="border-t border-line bg-white py-20">
+      <section className="border-t border-line bg-white py-20 cv-auto">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal className="flex flex-col items-center text-center sm:flex-row sm:items-end sm:justify-between sm:text-left">
             <div>
@@ -350,7 +349,7 @@ export default async function HomePage() {
       </section>
 
       {/* ── 7) COLLECTIONS ───────────────────────────────────────────────── */}
-      <section className="mx-auto max-w-7xl px-6 py-20">
+      <section className="mx-auto max-w-7xl px-6 py-20 cv-auto">
         <Reveal className="mx-auto max-w-3xl text-center sm:text-left">
           <p className="text-xs font-bold uppercase tracking-[0.22em] text-amber-deep">View Categories by Collections</p>
           <h2 className="mt-2 font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl">
@@ -411,7 +410,7 @@ export default async function HomePage() {
       </section>
 
       {/* ── 8) INDUSTRIES / APPLICATIONS ─────────────────────────────────── */}
-      <section className="border-t border-line bg-white py-20">
+      <section className="border-t border-line bg-white py-20 cv-auto">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal className="mx-auto max-w-2xl text-center sm:text-left">
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-amber-deep">Applications</p>
@@ -445,7 +444,7 @@ export default async function HomePage() {
       </section>
 
       {/* ── 9) REVIEWS ───────────────────────────────────────────────────── */}
-      <section className="border-t border-line py-20">
+      <section className="border-t border-line py-20 cv-auto">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal className="text-center">
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-amber-deep">Rated by the Trade</p>
@@ -463,7 +462,7 @@ export default async function HomePage() {
       </section>
 
       {/* ── 10) ABOUT TEASER + STATS ─────────────────────────────────────── */}
-      <section className="border-t border-line bg-white py-20">
+      <section className="border-t border-line bg-white py-20 cv-auto">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-2">
           <Reveal className="text-center lg:text-left">
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-amber-deep">About GSW</p>
@@ -519,7 +518,7 @@ export default async function HomePage() {
       </section>
 
       {/* ── 11) FAQ ──────────────────────────────────────────────────────── */}
-      <section className="mx-auto max-w-4xl px-6 py-20">
+      <section className="mx-auto max-w-4xl px-6 py-20 cv-auto">
         <Reveal className="text-center">
           <p className="text-xs font-bold uppercase tracking-[0.22em] text-amber-deep">Good to Know</p>
           <h2 className="mt-2 font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl">
@@ -532,7 +531,7 @@ export default async function HomePage() {
       </section>
 
       {/* ── 12) AMBER CTA BAND (the single contrasting dark-on-amber band) ── */}
-      <section className="bg-amber">
+      <section className="bg-amber cv-auto">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-6 px-6 py-16 text-center">
           <Reveal>
             <h2 className="mx-auto max-w-3xl font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl">

@@ -66,7 +66,7 @@ export default function Header({ logoUrl }: { logoUrl?: string }) {
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b border-line bg-paper/85 backdrop-blur-xl transition-shadow ${
+      className={`sticky top-0 z-50 border-b border-line bg-paper transition-shadow ${
         scrolled ? 'shadow-[0_1px_0_rgba(16,24,40,0.06),0_8px_24px_rgba(16,24,40,0.06)]' : ''
       }`}
     >
