@@ -15,6 +15,7 @@ import {
 } from '@/data/product-content';
 import { reviews as bundledReviews, type Review } from '@/data/reviews';
 import { defaultSiteSettings, type SiteSettings } from '@/data/site-settings';
+import { brandProducts } from '@/data/brand-products';
 import { getSupabase } from '@/lib/supabase';
 
 // Build/request-time accessor for the catalog.
@@ -59,7 +60,7 @@ export async function getCatalog(): Promise<Catalog> {
     }
   }
 
-  cache = { collections, categories, products };
+  cache = { collections, categories, products: [...products, ...brandProducts] };
   return cache;
 }
 

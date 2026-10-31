@@ -153,17 +153,23 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                 </div>
 
                 <div className="mt-5 flex items-end gap-3">
-                  <p className="font-display text-4xl font-bold text-ink">
-                    {formatPrice(product.price)}
-                    <span className="ml-2 text-sm font-medium text-ink/40">CAD</span>
-                  </p>
-                  {product.compareAt && (
-                    <p className="pb-1.5 text-lg text-ink/35 line-through">{formatPrice(product.compareAt)}</p>
-                  )}
-                  {discount > 0 && (
-                    <span className="mb-1.5 rounded-full bg-amber px-2.5 py-1 text-xs font-bold text-ink">
-                      Save {discount}%
-                    </span>
+                  {SITE.callForPricing ? (
+                    <p className="font-display text-3xl font-bold text-ink sm:text-4xl">Call for Pricing</p>
+                  ) : (
+                    <>
+                      <p className="font-display text-4xl font-bold text-ink">
+                        {formatPrice(product.price)}
+                        <span className="ml-2 text-sm font-medium text-ink/40">CAD</span>
+                      </p>
+                      {product.compareAt && (
+                        <p className="pb-1.5 text-lg text-ink/35 line-through">{formatPrice(product.compareAt)}</p>
+                      )}
+                      {discount > 0 && (
+                        <span className="mb-1.5 rounded-full bg-amber px-2.5 py-1 text-xs font-bold text-ink">
+                          Save {discount}%
+                        </span>
+                      )}
+                    </>
                   )}
                 </div>
 

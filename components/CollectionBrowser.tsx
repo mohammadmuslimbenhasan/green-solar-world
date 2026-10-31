@@ -3,6 +3,7 @@
 import { useMemo, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import type { Category, Product } from '@/data/catalog';
+import { SITE } from '@/data/catalog';
 import ProductCard from '@/components/ProductCard';
 
 type Sort = 'featured' | 'price-asc' | 'price-desc' | 'name';
@@ -80,8 +81,12 @@ export default function CollectionBrowser({
             className="rounded-xl border border-line bg-paper px-3 py-2.5 text-sm text-ink focus:border-amber"
           >
             <option value="featured">Featured</option>
-            <option value="price-asc">Price: Low to High</option>
-            <option value="price-desc">Price: High to Low</option>
+            {!SITE.callForPricing && (
+              <>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+              </>
+            )}
             <option value="name">Name A–Z</option>
           </select>
         </label>

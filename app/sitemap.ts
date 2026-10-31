@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { collections, products } from '@/data/catalog';
+import { brandProducts } from '@/data/brand-products';
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.greensolarworld.ca';
 
@@ -18,7 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.8,
     })),
-    ...products.map((p) => ({
+    ...[...products, ...brandProducts].map((p) => ({
       url: `${baseUrl}/products/${p.slug}/`,
       lastModified: now,
       changeFrequency: 'monthly' as const,

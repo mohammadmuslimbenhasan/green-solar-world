@@ -94,6 +94,8 @@ export interface Product {
 export const SITE = {
   name: 'Green Solar World Inc.',
   brand: 'GSW',
+  /** Wholesale counter sells by phone — hide all prices and show Call Now CTAs. */
+  callForPricing: true,
   tagline: 'GSW Provides High Quality Electrical Lighting Solutions',
   description:
     'GSW is an electrical and lighting distributor and wholesaler, offering a full line of high quality products along with dependable technical expertise and personalized customer service. With long experience in the trade, our team of experts can guide to choose the appropriate product for any specific type of job, be it commercial, residential or industrial.',

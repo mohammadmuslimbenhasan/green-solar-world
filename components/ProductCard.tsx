@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import type { Product } from '@/data/catalog';
-import { formatPrice, stockLabel } from '@/data/catalog';
+import { formatPrice, stockLabel, SITE } from '@/data/catalog';
 import ProductImage from '@/components/ProductImage';
 import AddToCartButton from '@/components/AddToCartButton';
 
@@ -46,12 +46,18 @@ export default function ProductCard({ product, priority = false }: { product: Pr
 
         <div className="mt-auto flex items-end justify-between gap-3 pt-3">
           <div>
-            <p className="font-display text-lg font-bold text-ink">
-              {formatPrice(product.price)}
-              <span className="ml-1 text-[11px] font-medium text-ink/65">CAD</span>
-            </p>
-            {product.compareAt && (
-              <p className="text-xs text-ink/60 line-through">{formatPrice(product.compareAt)}</p>
+            {SITE.callForPricing ? (
+              <p className="font-display text-base font-bold text-ink">Call for Pricing</p>
+            ) : (
+              <>
+                <p className="font-display text-lg font-bold text-ink">
+                  {formatPrice(product.price)}
+                  <span className="ml-1 text-[11px] font-medium text-ink/65">CAD</span>
+                </p>
+                {product.compareAt && (
+                  <p className="text-xs text-ink/60 line-through">{formatPrice(product.compareAt)}</p>
+                )}
+              </>
             )}
           </div>
           <AddToCartButton product={product} className="px-3.5 py-2 text-xs" />

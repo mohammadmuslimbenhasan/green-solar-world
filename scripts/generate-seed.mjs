@@ -4,6 +4,7 @@ import { writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { collections, categories, products, SITE } from '../data/catalog';
+import { brandProducts } from '../data/brand-products';
 import { productMetaTitle, productMetaDescription, productContent } from '../data/product-content';
 import { reviews, gbpAggregate, GBP_URL } from '../data/reviews';
 import { defaultSiteSettings } from '../data/site-settings';
@@ -32,7 +33,7 @@ for (const c of categories) {
   );
 }
 lines.push('');
-for (const p of products) {
+for (const p of [...products, ...brandProducts]) {
   const specs = JSON.stringify(p.specs).replace(/'/g, "''");
   const content = productContent(p);
   const faqs = JSON.stringify(content.faqs).replace(/'/g, "''");

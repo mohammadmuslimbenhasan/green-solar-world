@@ -117,19 +117,24 @@ export function productSchema(p: Product) {
     description: p.short,
     url: `${BASE}/products/${p.slug}/`,
     ...(p.image ? { image: `${BASE}${p.image}` } : {}),
-    offers: {
-      '@type': 'Offer',
-      price: p.price.toFixed(2),
-      priceCurrency: 'CAD',
-      availability: availability[p.stock] ?? 'https://schema.org/InStock',
-      url: `${BASE}/products/${p.slug}/`,
-      itemCondition: 'https://schema.org/NewCondition',
-      shippingDetails: {
-        '@type': 'OfferShippingDetails',
-        shippingRate: { '@type': 'MonetaryAmount', value: SITE.shippingFlat, currency: 'CAD' },
-        shippingDestination: { '@type': 'DefinedRegion', addressCountry: 'CA' },
-      },
-    },
+    // Wholesale counter: no public price — omit Offer rather than emit price 0.
+    ...(SITE.callForPricing
+      ? {}
+      : {
+          offers: {
+            '@type': 'Offer',
+            price: p.price.toFixed(2),
+            priceCurrency: 'CAD',
+            availability: availability[p.stock] ?? 'https://schema.org/InStock',
+            url: `${BASE}/products/${p.slug}/`,
+            itemCondition: 'https://schema.org/NewCondition',
+            shippingDetails: {
+              '@type': 'OfferShippingDetails',
+              shippingRate: { '@type': 'MonetaryAmount', value: SITE.shippingFlat, currency: 'CAD' },
+              shippingDestination: { '@type': 'DefinedRegion', addressCountry: 'CA' },
+            },
+          },
+        }),
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: gbpAggregate.rating,
