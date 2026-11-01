@@ -60,7 +60,7 @@ export const brandProducts: Product[] = [
     short: 'As a cornerstone of Toronto s soccer community since 1968, Toronto Azzurri Soccer Club has built a longstanding legacy of youth development, competitive soccer,',
     description: 'As a cornerstone of Toronto s soccer community since 1968, Toronto Azzurri Soccer Club has built a longstanding legacy of youth development, competitive soccer, and community engagement. Today, its Youth Sport Village on Keele Street serves as a dedicated community sports complex, featuring the Azzurri Stadium Field and facilities designed to support players, families, and the next generation of a',
     specs: ['Genuine Reno Lighting product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-reno-led-retrofit-case-study-azzurri-school-club.webp',
+    image: null,
   },
   {
     slug: 'reno-architectural-post-top-luminaires',
@@ -88,7 +88,7 @@ export const brandProducts: Product[] = [
     short: 'Meet the indirect lighting solution that provides soft, diffuse illumination by reflecting light off surfaces, which reduces glare, creates even lighting, and e',
     description: 'Meet the indirect lighting solution that provides soft, diffuse illumination by reflecting light off surfaces, which reduces glare, creates even lighting, and enhances visual comfort.',
     specs: ['Genuine Reno Lighting product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-reno-led-architectural-indirect-curved-panel-lights.webp',
+    image: null,
   },
   {
     slug: 'reno-led-lighting-retrofit-case-studies',
@@ -102,7 +102,7 @@ export const brandProducts: Product[] = [
     short: 'LED Lighting Retrofit Case Studies genuine reno product, available wholesale at Green Solar World Inc.',
     description: 'LED Lighting Retrofit Case Studies by reno. Call for wholesale pricing.',
     specs: ['Genuine Reno Lighting product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-reno-led-lighting-retrofit-case-studies.webp',
+    image: null,
   },
   {
     slug: 'reno-led-retrofit-case-study-james-potter-public-school',
@@ -116,7 +116,7 @@ export const brandProducts: Product[] = [
     short: 'The library at James Potter Public School in Brampton, Ontario, brings together a high wood ceiling, exposed structural beams and generous upper windows. Its co',
     description: 'The library at James Potter Public School in Brampton, Ontario, brings together a high wood ceiling, exposed structural beams and generous upper windows. Its completed lighting installation complements these architectural features with a coordinated mix of linear, ring and wall-mounted luminaires.',
     specs: ['Genuine Reno Lighting product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-reno-led-retrofit-case-study-james-potter-public-school.webp',
+    image: null,
   },
   {
     slug: 'reno-changeable-silhoulette-wall-light',
@@ -195,7 +195,7 @@ export const brandProducts: Product[] = [
     collection: 'residential-lighting',
     category: 'led-ceiling-fixture',
     price: 0,
-    featured: false,
+    featured: true, 
     stock: 'in-stock',
     short: 'The Aurora s circular form defines its environment with subtle sophistication. Its shape accentuates architectural lines, softens edges, and creates a sense of',
     description: 'The Aurora s circular form defines its environment with subtle sophistication. Its shape accentuates architectural lines, softens edges, and creates a sense of balance within any space blending sculptural beauty with purposeful illumination.',
@@ -214,7 +214,7 @@ export const brandProducts: Product[] = [
     short: 'Exit Signs &amp; Emergency Lighting specifically designed to illuminate the path to egress and guide building occupants to safety.',
     description: 'Exit Signs &amp; Emergency Lighting specifically designed to illuminate the path to egress and guide building occupants to safety.',
     specs: ['Genuine Reno Lighting product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-reno-exit-signs-amp-emergency-lighting.webp',
+    image: null,
   },
   {
     slug: 'reno-beamflex',
@@ -242,7 +242,7 @@ export const brandProducts: Product[] = [
     short: 'The Bellevue Post Top combines timeless elegance with refined design, enhancing streetscapes and pedestrian areas with glare-free, uniform lighting that blends',
     description: 'The Bellevue Post Top combines timeless elegance with refined design, enhancing streetscapes and pedestrian areas with glare-free, uniform lighting that blends beauty and performance.',
     specs: ['Genuine Reno Lighting product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-reno-lantern-post.webp',
+    image: null,
   },
   {
     slug: 'reno-architectural',
@@ -270,7 +270,7 @@ export const brandProducts: Product[] = [
     short: 'LED Retrofit Case Study: 1004 Middlegate genuine reno product, available wholesale at Green Solar World Inc.',
     description: 'LED Retrofit Case Study: 1004 Middlegate by reno. Call for wholesale pricing.',
     specs: ['Genuine Reno Lighting product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-reno-led-retrofit-case-study-1004-middlegate.webp',
+    image: null,
   },
   {
     slug: 'reno-led-retrofit-case-study-best-buy',
@@ -284,7 +284,7 @@ export const brandProducts: Product[] = [
     short: 'LED Retrofit Case Study: Best Buy genuine reno product, available wholesale at Green Solar World Inc.',
     description: 'LED Retrofit Case Study: Best Buy by reno. Call for wholesale pricing.',
     specs: ['Genuine Reno Lighting product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-reno-led-retrofit-case-study-best-buy.webp',
+    image: null,
   },
   {
     slug: 'reno-led-retrofit-case-study-camh',
@@ -298,7 +298,7 @@ export const brandProducts: Product[] = [
     short: 'LED Retrofit Case Study: camh genuine reno product, available wholesale at Green Solar World Inc.',
     description: 'LED Retrofit Case Study: camh by reno. Call for wholesale pricing.',
     specs: ['Genuine Reno Lighting product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-reno-led-retrofit-case-study-camh.webp',
+    image: null,
   },
   {
     slug: 'reno-led-retrofit-case-study-canlight',
@@ -312,7 +312,7 @@ export const brandProducts: Product[] = [
     short: 'LED Retrofit Case Study: Canlight genuine reno product, available wholesale at Green Solar World Inc.',
     description: 'LED Retrofit Case Study: Canlight by reno. Call for wholesale pricing.',
     specs: ['Genuine Reno Lighting product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-reno-led-retrofit-case-study-canlight.webp',
+    image: null,
   },
   {
     slug: 'reno-led-retrofit-case-study-cn-rail',
@@ -326,7 +326,7 @@ export const brandProducts: Product[] = [
     short: 'LED Retrofit Case Study: CN Rail genuine reno product, available wholesale at Green Solar World Inc.',
     description: 'LED Retrofit Case Study: CN Rail by reno. Call for wholesale pricing.',
     specs: ['Genuine Reno Lighting product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-reno-led-retrofit-case-study-cn-rail.webp',
+    image: null,
   },
   {
     slug: 'reno-led-retrofit-case-study-flamboro-downs',
@@ -340,7 +340,7 @@ export const brandProducts: Product[] = [
     short: 'LED Retrofit Case Study: Flamboro Downs genuine reno product, available wholesale at Green Solar World Inc.',
     description: 'LED Retrofit Case Study: Flamboro Downs by reno. Call for wholesale pricing.',
     specs: ['Genuine Reno Lighting product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-reno-led-retrofit-case-study-flamboro-downs.webp',
+    image: null,
   },
   {
     slug: 'reno-led-retrofit-case-study-kubota',
@@ -354,7 +354,7 @@ export const brandProducts: Product[] = [
     short: 'LED Retrofit Case Study: Kubota genuine reno product, available wholesale at Green Solar World Inc.',
     description: 'LED Retrofit Case Study: Kubota by reno. Call for wholesale pricing.',
     specs: ['Genuine Reno Lighting product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-reno-led-retrofit-case-study-kubota.webp',
+    image: null,
   },
   {
     slug: 'reno-architectural-strip-system-generation-2',
@@ -396,7 +396,7 @@ export const brandProducts: Product[] = [
     short: 'Evoke genuine reno product, available wholesale at Green Solar World Inc.',
     description: 'Evoke by reno. Call for wholesale pricing.',
     specs: ['Genuine Reno Lighting product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-reno-evoke.webp',
+    image: null,
   },
   {
     slug: 'reno-architectural-grid-frame-lights',
@@ -452,7 +452,7 @@ export const brandProducts: Product[] = [
     short: 'High-performance Backlit Flat Panels available in a Sensor-Ready design for a seamless, integrated look.',
     description: 'High-performance Backlit Flat Panels available in a Sensor-Ready design for a seamless, integrated look.',
     specs: ['Genuine Reno Lighting product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-reno-led-sensor.webp',
+    image: null,
   },
   {
     slug: 'etlin-rtbpspk',
@@ -881,7 +881,7 @@ export const brandProducts: Product[] = [
     collection: 'residential-lighting',
     category: 'led-ceiling-fixture',
     price: 0,
-    featured: false,
+    featured: true, 
     stock: 'in-stock',
     short: 'Smart Permanent Exterior String Light Professional-grade smart string lights for year-round outdoor beauty. Artlight&#039;s Smart Permanent Exterior String Ligh',
     description: 'Smart Permanent Exterior String Light Professional-grade smart string lights for year-round outdoor beauty. Artlight&#039;s Smart Permanent Exterior String Lights deliver professional-level outdoor illumination with individually addressable RGBICW LEDs. Built to withstand all weather conditions, these smart string lights are perfect for patios, gardens, restaurants, rooftops, and other commercial',
@@ -895,7 +895,7 @@ export const brandProducts: Product[] = [
     collection: 'residential-lighting',
     category: 'led-ceiling-fixture',
     price: 0,
-    featured: false,
+    featured: true, 
     stock: 'in-stock',
     short: 'Wall Washer SMD LED Strip Light - RGBW 24W/m Power 24VDC Input 28 LED/m 570lm White 30 Beam Angle IP67 Cutting Size: 250mm (7 LEDs) Includes 15pcs of clips, 4p',
     description: 'Wall Washer SMD LED Strip Light - RGBW 24W/m Power 24VDC Input 28 LED/m 570lm White 30 Beam Angle IP67 Cutting Size: 250mm (7 LEDs) Includes 15pcs of clips, 4pcs of end caps, and 4pcs of end caps with hole.',
@@ -1021,7 +1021,7 @@ export const brandProducts: Product[] = [
     collection: 'residential-lighting',
     category: 'led-ceiling-fixture',
     price: 0,
-    featured: false,
+    featured: true, 
     stock: 'in-stock',
     short: 'Wall Washer SMD LED Strip Light 14.4W/m Power 24VDC Input Available in 3000K, 4000K, 5000K 50 LED/m 1260lm 30 Beam Angle IP67 Cutting Size: 125mm (7 LEDs) 10mm',
     description: 'Wall Washer SMD LED Strip Light 14.4W/m Power 24VDC Input Available in 3000K, 4000K, 5000K 50 LED/m 1260lm 30 Beam Angle IP67 Cutting Size: 125mm (7 LEDs) 10mm PCB Includes 15pcs of clips, 4pcs of end caps, and 4pcs of end caps with hole.',
@@ -1049,7 +1049,7 @@ export const brandProducts: Product[] = [
     collection: 'residential-lighting',
     category: 'led-ceiling-fixture',
     price: 0,
-    featured: false,
+    featured: true, 
     stock: 'in-stock',
     short: 'Ultra Slim 60W Constant Voltage LED Driver Output 24VDC Minimum Load: 6% of total power (3.6W) ELV, MLV, Triac Dimmable Class2 PF.0.9 licker free suitable for d',
     description: 'Ultra Slim 60W Constant Voltage LED Driver Output 24VDC Minimum Load: 6% of total power (3.6W) ELV, MLV, Triac Dimmable Class2 PF.0.9 licker free suitable for damp locations cETL and FCC approved',
@@ -1217,7 +1217,7 @@ export const brandProducts: Product[] = [
     collection: 'residential-lighting',
     category: 'led-recessed-down-light',
     price: 0,
-    featured: false,
+    featured: true, 
     stock: 'in-stock',
     short: '4&quot; recessed commercial LED downlight, 5-way CCT selectable and adjustable power. For offices, retail, and institutional projects. Request a quote.',
     description: '4&quot; recessed commercial LED downlight, 5-way CCT selectable and adjustable power. For offices, retail, and institutional projects. Request a quote.',
@@ -1278,7 +1278,7 @@ export const brandProducts: Product[] = [
     short: 'T45 LED filament bulb, 7W, 700Lm, 3000K/4000K/5000K, E26 base, 360 beam, 120V, dimmable, CRI &gt;80, 50,000-hour life. Vintage tubular. Get a quote.',
     description: 'T45 LED filament bulb, 7W, 700Lm, 3000K/4000K/5000K, E26 base, 360 beam, 120V, dimmable, CRI &gt;80, 50,000-hour life. Vintage tubular. Get a quote.',
     specs: ['Genuine Votatec product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-votatec-t45-led-filament-bulb-7w-e26-3.webp',
+    image: null,
   },
   {
     slug: 'canolight-cl-26',
@@ -1320,7 +1320,7 @@ export const brandProducts: Product[] = [
     short: 'LED Night Light with integrated Dusk to Dawn Sensor.',
     description: 'LED Night Light with integrated Dusk to Dawn Sensor.',
     specs: ['Genuine Greenlite product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-greenlite-round-motion-sensor-led-nite-lite.webp',
+    image: null,
   },
   {
     slug: 'greenlite-pir-occupancy-sensor',
@@ -1334,7 +1334,7 @@ export const brandProducts: Product[] = [
     short: 'PIR Occupancy Sensor genuine greenlite product, available wholesale at Green Solar World Inc.',
     description: 'PIR Occupancy Sensor by greenlite. Call for wholesale pricing.',
     specs: ['Genuine Greenlite product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-greenlite-pir-occupancy-sensor.webp',
+    image: null,
   },
   {
     slug: 'greenlite-9w-4-inch-ceiling-fixture',
@@ -1348,7 +1348,7 @@ export const brandProducts: Product[] = [
     short: '9W 4 Inch Ceiling Fixture genuine greenlite product, available wholesale at Green Solar World Inc.',
     description: '9W 4 Inch Ceiling Fixture by greenlite. Call for wholesale pricing.',
     specs: ['Genuine Greenlite product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-greenlite-9w-4-inch-ceiling-fixture.webp',
+    image: null,
   },
   {
     slug: 'greenlite-12w-par38-dimmable-dusk-to-dawn-sensor-120w-equivalent',
@@ -1362,7 +1362,7 @@ export const brandProducts: Product[] = [
     short: '12W PAR38 Dimmable Dusk To Dawn Sensor 120W Equivalent genuine greenlite product, available wholesale at Green Solar World Inc.',
     description: '12W PAR38 Dimmable Dusk To Dawn Sensor 120W Equivalent by greenlite. Call for wholesale pricing.',
     specs: ['Genuine Greenlite product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-greenlite-12w-par38-dimmable-dusk-to-dawn-sensor-120w-equivalent.webp',
+    image: null,
   },
   {
     slug: 'greenlite-horticulture-led-light',
@@ -1376,7 +1376,7 @@ export const brandProducts: Product[] = [
     short: 'Horticulture LED Light genuine greenlite product, available wholesale at Green Solar World Inc.',
     description: 'Horticulture LED Light by greenlite. Call for wholesale pricing.',
     specs: ['Genuine Greenlite product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-greenlite-horticulture-led-light.webp',
+    image: null,
   },
   {
     slug: 'greenlite-multicolor-holiday-led-string-lights',
@@ -1390,7 +1390,7 @@ export const brandProducts: Product[] = [
     short: 'Multicolor Holiday LED String Lights genuine greenlite product, available wholesale at Green Solar World Inc.',
     description: 'Multicolor Holiday LED String Lights by greenlite. Call for wholesale pricing.',
     specs: ['Genuine Greenlite product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-greenlite-multicolor-holiday-led-string-lights.webp',
+    image: null,
   },
   {
     slug: 'greenlite-warm-white-holiday-led-string-lights',
@@ -1404,7 +1404,7 @@ export const brandProducts: Product[] = [
     short: 'Warm White Holiday LED String Lights genuine greenlite product, available wholesale at Green Solar World Inc.',
     description: 'Warm White Holiday LED String Lights by greenlite. Call for wholesale pricing.',
     specs: ['Genuine Greenlite product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-greenlite-warm-white-holiday-led-string-lights.webp',
+    image: null,
   },
   {
     slug: 'greenlite-8w-a19-antibacterial-bulb-60w-equivalent',
@@ -1418,7 +1418,7 @@ export const brandProducts: Product[] = [
     short: '8W A19 ANTIBACTERIAL Bulb 60W Equivalent genuine greenlite product, available wholesale at Green Solar World Inc.',
     description: '8W A19 ANTIBACTERIAL Bulb 60W Equivalent by greenlite. Call for wholesale pricing.',
     specs: ['Genuine Greenlite product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-greenlite-8w-a19-antibacterial-bulb-60w-equivalent.webp',
+    image: null,
   },
   {
     slug: 'greenlite-wi',
@@ -1432,7 +1432,7 @@ export const brandProducts: Product[] = [
     short: 'Wi genuine greenlite product, available wholesale at Green Solar World Inc.',
     description: 'Wi by greenlite. Call for wholesale pricing.',
     specs: ['Genuine Greenlite product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-greenlite-wi.webp',
+    image: null,
   },
   {
     slug: 'greenlite-9w-a19-dusk-to-dawn-sensor-60w-equivalent',
@@ -1446,7 +1446,7 @@ export const brandProducts: Product[] = [
     short: '9W A19 Dusk To Dawn Sensor 60W Equivalent genuine greenlite product, available wholesale at Green Solar World Inc.',
     description: '9W A19 Dusk To Dawn Sensor 60W Equivalent by greenlite. Call for wholesale pricing.',
     specs: ['Genuine Greenlite product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-greenlite-9w-a19-dusk-to-dawn-sensor-60w-equivalent.webp',
+    image: null,
   },
   {
     slug: 'greenlite-wi-2',
@@ -1460,7 +1460,7 @@ export const brandProducts: Product[] = [
     short: 'Wi genuine greenlite product, available wholesale at Green Solar World Inc.',
     description: 'Wi by greenlite. Call for wholesale pricing.',
     specs: ['Genuine Greenlite product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-greenlite-wi-2.webp',
+    image: null,
   },
   {
     slug: 'greenlite-weatherstrip-caulk-saver',
@@ -1474,7 +1474,7 @@ export const brandProducts: Product[] = [
     short: 'Greenlite&#039;s Door &amp; Window weather stripping kit is to protect your home from the outside elements in order to maximize energy efficiency.',
     description: 'Greenlite&#039;s Door &amp; Window weather stripping kit is to protect your home from the outside elements in order to maximize energy efficiency.',
     specs: ['Genuine Greenlite product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-greenlite-weatherstrip-caulk-saver.webp',
+    image: null,
   },
   {
     slug: 'greenlite-10w-6-quot-5cct-retrofit-downlight',
@@ -1488,7 +1488,7 @@ export const brandProducts: Product[] = [
     short: '10W 6&quot; 5CCT Retrofit Downlight genuine greenlite product, available wholesale at Green Solar World Inc.',
     description: '10W 6&quot; 5CCT Retrofit Downlight by greenlite. Call for wholesale pricing.',
     specs: ['Genuine Greenlite product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-greenlite-10w-6-quot-5cct-retrofit-downlight.webp',
+    image: null,
   },
   {
     slug: 'greenlite-weatherstrip-foam-tape-self',
@@ -1502,7 +1502,7 @@ export const brandProducts: Product[] = [
     short: 'Greenlite&#039;s Door &amp; Window weather stripping kit is to protect your home from the outside elements in order to maximize energy efficiency.',
     description: 'Greenlite&#039;s Door &amp; Window weather stripping kit is to protect your home from the outside elements in order to maximize energy efficiency.',
     specs: ['Genuine Greenlite product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-greenlite-weatherstrip-foam-tape-self.webp',
+    image: null,
   },
   {
     slug: 'greenlite-v',
@@ -1516,7 +1516,7 @@ export const brandProducts: Product[] = [
     short: 'Greenlite&#039;s weatherstipping products seal out drafts, prevents heat loss and improves energy efficiency.',
     description: 'Greenlite&#039;s weatherstipping products seal out drafts, prevents heat loss and improves energy efficiency.',
     specs: ['Genuine Greenlite product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-greenlite-v.webp',
+    image: null,
   },
   {
     slug: 'greenlite-tier-1-advanced-power-strip',
@@ -1530,7 +1530,7 @@ export const brandProducts: Product[] = [
     short: 'Tier 1 Advanced Power Strip genuine greenlite product, available wholesale at Green Solar World Inc.',
     description: 'Tier 1 Advanced Power Strip by greenlite. Call for wholesale pricing.',
     specs: ['Genuine Greenlite product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-greenlite-tier-1-advanced-power-strip.webp',
+    image: null,
   },
   {
     slug: 'rack-a-tiers-croc-x27-s-needle-nose-wire-strippers',
@@ -1651,7 +1651,7 @@ export const brandProducts: Product[] = [
     collection: 'residential-lighting',
     category: 'led-ceiling-fixture',
     price: 0,
-    featured: false,
+    featured: true, 
     stock: 'in-stock',
     short: 'Features: Bulb: COB LED Run Time: 5 hours Max Output: 150 Lumens',
     description: 'Features: Bulb: COB LED Run Time: 5 hours Max Output: 150 Lumens',
@@ -1749,7 +1749,7 @@ export const brandProducts: Product[] = [
     collection: 'residential-lighting',
     category: 'led-ceiling-fixture',
     price: 0,
-    featured: false,
+    featured: true, 
     stock: 'in-stock',
     short: 'Features: Installs in under a minute! The world&#x27;s only fully automatic astronomical timer. Switches lights dusk-to-dawn anywhere in the world. Plug &amp; p',
     description: 'Features: Installs in under a minute! The world&#x27;s only fully automatic astronomical timer. Switches lights dusk-to-dawn anywhere in the world. Plug &amp; play. Never needs programming. Self recovers from power outages. Direct replacement for twist-lock photocells. Load rating 1800VA. Listed to UL916. 15 Year Warranty. Made in USA',
