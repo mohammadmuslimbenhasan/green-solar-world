@@ -18,7 +18,7 @@ export const brandProducts: Product[] = [
     short: 'The Lucid Bi-Directional Luminaire is an ultra-slim, contemporary light designed for performance. It provides seamless, dot-free upward and downward illuminatio',
     description: 'The Lucid Bi-Directional Luminaire is an ultra-slim, contemporary light designed for performance. It provides seamless, dot-free upward and downward illumination with a 50/50 direct-indirect distribution. Its translucent lens creates an elegant, diffused glow resembling natural daylight that brings warmth to any environment.',
     specs: ['Genuine Reno Lighting product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-reno-ambient-bi.webp',
+    image: null,
   },
   {
     slug: 'reno-architectural-round-strips',
@@ -32,7 +32,7 @@ export const brandProducts: Product[] = [
     short: 'With its ultra-slim, and clean modern form, the RAIL seamlessly integrates into architectural spaces while delivering powerful, high-performance illumination. D',
     description: 'With its ultra-slim, and clean modern form, the RAIL seamlessly integrates into architectural spaces while delivering powerful, high-performance illumination. Designed with minimalist precision, every detail is crafted to elevate contemporary environments where aesthetics and function go hand in hand.',
     specs: ['Genuine Reno Lighting product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-reno-architectural-round-strips.webp',
+    image: null,
   },
   {
     slug: 'reno-architectural-vanity-bars-amp-wall-sconces',
@@ -46,7 +46,7 @@ export const brandProducts: Product[] = [
     short: 'Elevate the mood of any room with an inviting glow that effortlessly enhances modern architectural spaces, bringing a touch of timeless sophistication to both c',
     description: 'Elevate the mood of any room with an inviting glow that effortlessly enhances modern architectural spaces, bringing a touch of timeless sophistication to both ceilings and walls.',
     specs: ['Genuine Reno Lighting product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-reno-architectural-vanity-bars-amp-wall-sconces.webp',
+    image: null,
   },
   {
     slug: 'reno-led-retrofit-case-study-azzurri-school-club',
@@ -74,7 +74,7 @@ export const brandProducts: Product[] = [
     short: 'Frame a grand boulevard or accentuate the architecture of a modern plaza with tall beacons of light that shape and illuminate your vision for outdoor design.',
     description: 'Frame a grand boulevard or accentuate the architecture of a modern plaza with tall beacons of light that shape and illuminate your vision for outdoor design.',
     specs: ['Genuine Reno Lighting product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-reno-architectural-post-top-luminaires.webp',
+    image: null,
   },
   {
     slug: 'reno-led-architectural-indirect-curved-panel-lights',
@@ -130,7 +130,7 @@ export const brandProducts: Product[] = [
     short: 'This architectural Up &amp; Down Wall Light redefines exterior lighting with its clean silhouette and dynamic functionality. Designed with interchangeable shade',
     description: 'This architectural Up &amp; Down Wall Light redefines exterior lighting with its clean silhouette and dynamic functionality. Designed with interchangeable shade options, it lets you customize the light pattern and visual impact perfect for creating the right ambiance on any building fac ade. Durable and striking in black or white, it s built for both performance and presence.',
     specs: ['Genuine Reno Lighting product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-reno-changeable-silhoulette-wall-light.webp',
+    image: null,
   },
   {
     slug: 'reno-company',
@@ -144,7 +144,7 @@ export const brandProducts: Product[] = [
     short: 'This is the company page of the website',
     description: 'This is the company page of the website',
     specs: ['Genuine Reno Lighting product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-reno-company.webp',
+    image: null,
   },
   {
     slug: 'reno-cylinder-sconce',
@@ -158,7 +158,7 @@ export const brandProducts: Product[] = [
     short: 'Our collection of wall-mounted cylinders offers a trio of distinctive forms circular, square, and sculptural hourglass each designed to complement a range of ar',
     description: 'Our collection of wall-mounted cylinders offers a trio of distinctive forms circular, square, and sculptural hourglass each designed to complement a range of architectural styles. With both direct and indirect illumination options, these fixtures not only elevate exterior fa ades but also create dynamic layers of light for a striking visual impact.',
     specs: ['Genuine Reno Lighting product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-reno-cylinder-sconce.webp',
+    image: null,
   },
   {
     slug: 'reno-digital-addressable-lighting-interface-dali-led-retrofit-sol',
@@ -186,7 +186,7 @@ export const brandProducts: Product[] = [
     short: 'Elevate the mood of any room with an inviting glow that effortlessly enhances modern architectural spaces, bringing a touch of timeless sophistication to both c',
     description: 'Elevate the mood of any room with an inviting glow that effortlessly enhances modern architectural spaces, bringing a touch of timeless sophistication to both ceilings and walls.',
     specs: ['Genuine Reno Lighting product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-reno-decorative-dot-flush-mount-fixtures.webp',
+    image: null,
   },
   {
     slug: 'reno-architectural-ring-fixture',
@@ -228,7 +228,7 @@ export const brandProducts: Product[] = [
     short: 'beamflex genuine reno product, available wholesale at Green Solar World Inc.',
     description: 'beamflex by reno. Call for wholesale pricing.',
     specs: ['Genuine Reno Lighting product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-reno-beamflex.webp',
+    image: null,
   },
   {
     slug: 'reno-lantern-post',
@@ -256,7 +256,7 @@ export const brandProducts: Product[] = [
     short: 'Elevate your design with sleek and modern architectural cylinder lighting that blends minimalist design and powerful performance for stunning ambience and impac',
     description: 'Elevate your design with sleek and modern architectural cylinder lighting that blends minimalist design and powerful performance for stunning ambience and impact.',
     specs: ['Genuine Reno Lighting product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-reno-architectural.webp',
+    image: null,
   },
   {
     slug: 'reno-led-retrofit-case-study-1004-middlegate',
@@ -368,7 +368,7 @@ export const brandProducts: Product[] = [
     short: 'ARCHITECTURAL STRIP SYSTEM GENERATION 2 genuine reno product, available wholesale at Green Solar World Inc.',
     description: 'ARCHITECTURAL STRIP SYSTEM GENERATION 2 by reno. Call for wholesale pricing.',
     specs: ['Genuine Reno Lighting product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-reno-architectural-strip-system-generation-2.webp',
+    image: null,
   },
   {
     slug: 'reno-led-flexible-neon-strip',
@@ -410,7 +410,7 @@ export const brandProducts: Product[] = [
     short: 'Discover a fresh approach to enhancing interior T-Bar ceilings with the TELAIO SERIES Architectural Grid Frame Light.',
     description: 'Discover a fresh approach to enhancing interior T-Bar ceilings with the TELAIO SERIES Architectural Grid Frame Light.',
     specs: ['Genuine Reno Lighting product', 'Distributed by Green Solar World Inc.', 'Call for wholesale pricing'],
-    image: '/images/products/brand-reno-architectural-grid-frame-lights.webp',
+    image: null,
   },
   {
     slug: 'etlin-flh5s',
